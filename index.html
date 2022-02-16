@@ -25,16 +25,17 @@
 
     </section>
 
-    <section class="editor flex justify-center main-layout">
-        <div class="canvas-container" hidden>
+    <section class="editor main-layout" hidden>
+        <div class="canvas-container flex">
 
-            <canvas id="my-canvas" height="400" width="400"></canvas>
+            <canvas id="my-canvas" height="600" width="600"></canvas>
 
-            <div class="user-editor">
+            <div class="user-editor flex column">
                 <input type="text" name="meme-text" placeholder="add text" oninput="onSetText(this)" />
+                <input type="range" name="font-size" min="30" max="100" value="50" oninput="onSetSize(this.value);"/>
+                <span id="font-size">50</span>
+                <button>Switch Line</button>
                 <input type="color" name="color" value="#ffffff" oninput="onSetColor(this)" />
-                <input type="range" name="font-size" min="10" max="80" value="20" oninput="onSetSize(this.value);"/>
-                <span id="font-size">20</span>
             </div>
         </div>
 

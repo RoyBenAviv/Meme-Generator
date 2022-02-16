@@ -1,3 +1,24 @@
-canvas {
+.editor {
+    margin-block-start: 5rem;
+    padding: 20px;
+    justify-content: center;
+}
+
+.editor .user-editor {
+    margin-inline-start: 1.875rem;
+}
+.editor .user-editor > *:not(:first-child, span) {
+    margin-block-start: 20px;
+}
+
+.editor .user-editor > * {
+    align-self: flex-start;
+}
+
+.editor .user-editor input {
+    width: 250px;
+}
+
+.editor .canvas-container .my-canvas {
     background-color: white;
 }

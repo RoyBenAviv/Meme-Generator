@@ -10,7 +10,7 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [{
     txt: '',
-    size: 20,
+    size: 50,
     align: 'left',
     color: 'white'
     }]

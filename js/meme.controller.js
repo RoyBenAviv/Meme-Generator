@@ -47,12 +47,12 @@ function drawText(text, x, y) {
 
     const meme = getMemeForDisplay();
     gCurrLineIdx = getCurrLineIdx()
-    // gCtx.strokeStyle = `${meme.lines[gCurrLineIdx].color}`;
+    gCtx.strokeStyle = 'black';
     gCtx.fillStyle = `${meme.lines[gCurrLineIdx].color}`;
     gCtx.textAlign = `${meme.lines[gCurrLineIdx].align}`;
     gCtx.font = `${meme.lines[gCurrLineIdx].size}px Arial`;
     gCtx.fillText(text, x, y);
-    // gCtx.strokeText(text, x, y);
+    gCtx.strokeText(text, x, y);
 }
 
 

@@ -17,6 +17,6 @@ function renderGallery() {
 
 function onImgSelect(imageId) {
     document.querySelector('.gallery-images').style.display = 'none'
-    document.querySelector('.canvas-container').style.display = 'flex'
+    document.querySelector('.editor').style.display = 'flex'
     setImg(imageId)
 }
