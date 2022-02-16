@@ -12,7 +12,7 @@ var gMeme = {
     txt: '',
     size: 20,
     align: 'left',
-    color: 'red'
+    color: 'white'
     }]
 }
 
@@ -23,6 +23,18 @@ function setImg(imageId) {
 
 function setLineTxt(memeTxt) {
     return gMeme.lines[0].txt = memeTxt
+}
+
+function setColorTxt(memeClr) {
+    return gMeme.lines[0].color = memeClr
+}
+
+function setTxtSize(txtSize) {
+    return gMeme.lines[0].size = txtSize
+}
+
+function getCurrLineIdx() {
+    return gMeme.selectedLineIdx
 }
 
 function getMemeForDisplay() {

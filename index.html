@@ -32,7 +32,9 @@
 
             <div class="user-editor">
                 <input type="text" name="meme-text" placeholder="add text" oninput="onSetText(this)" />
-
+                <input type="color" name="color" value="#ffffff" oninput="onSetColor(this)" />
+                <input type="range" name="font-size" min="10" max="80" value="20" oninput="onSetSize(this.value);"/>
+                <span id="font-size">20</span>
             </div>
         </div>
 
