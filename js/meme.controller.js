@@ -12,26 +12,32 @@ function init() {
 
 function renderMeme() {
     drawImgFromlocal()
+    
 }
 
 
 
 function drawImgFromlocal() {
+
+    const meme = getMemeForDisplay()
+
     var img = new Image()
-    img.src = './images/1.jpg';
+    img.src = `./images/${meme.selectedImgId}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
-        drawText('First Test', 100, 50)
+        // drawText(meme.lines[0].txt, 100, 50)
+        drawText()
     }
 }
 
 function drawText(text, x, y) {
-    // gCtx.lineWidth = -;
-    // gCtx.strokeStyle = 'black';
-    gCtx.fillStyle = 'white';
-    gCtx.font = '40px Arial';
+
+    const meme = getMemeForDisplay()
+    
+    gCtx.strokeStyle = `${meme.lines[0].color}`;
+    gCtx.font = `${meme.lines[0].size}px Arial`;
     gCtx.fillText(text, x, y);
-    gCtx.strokeText(text, x, y);
+    gCtx.strokeText(meme.lines[0].txt, 100, 50);
   }
 
 
