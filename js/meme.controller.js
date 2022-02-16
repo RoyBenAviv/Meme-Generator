@@ -20,7 +20,7 @@ function drawMemeFromGallery() {
     const meme = getMemeForDisplay();
 
     var img = new Image();
-    img.src = `./images/${meme.selectedImgId}.jpg`;
+    img.src = `./images/meme-images/${meme.selectedImgId}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
         // drawText(meme.lines[0].txt, 100, 50)

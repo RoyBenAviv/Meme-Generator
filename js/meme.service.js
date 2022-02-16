@@ -1,10 +1,9 @@
 'use strict'
 
 var gImgs = [
-    {id: 1, url: `./images/1.jpg`},
-    {id: 2, url: `./images/2.jpg`},
+    {id: 1, url: `./images/meme-images/1.jpg`},
+    {id: 2, url: `./images/meme-images/2.jpg`},
 ];
-
 
 var gMeme = {
     selectedImgId: 0,

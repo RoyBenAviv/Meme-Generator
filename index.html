@@ -12,21 +12,28 @@
 <body onload="init()">
 
     <header>
-
+        <div class="header-container main-layout flex align-center">
+            <div class="logo flex align-center">
+                <img src="/images/other/logo.png">
+                <h2>Meme Generator</h2>
+            </div>
+        </div>
     </header>
-    <section class="gallery">
+    <section class="gallery main-layout">
 
         <div class="gallery-images"></div>
 
     </section>
 
-    <section class="editor">
-        <div class="user-editor">
-            <input type="text" name="meme-text" placeholder="add text" oninput="onSetText(this)"/>
+    <section class="editor flex justify-center main-layout">
+        <div class="canvas-container" hidden>
 
-        </div>
-        <div class="canvas-container">
             <canvas id="my-canvas" height="400" width="400"></canvas>
+
+            <div class="user-editor">
+                <input type="text" name="meme-text" placeholder="add text" oninput="onSetText(this)" />
+
+            </div>
         </div>
 
 

@@ -1,0 +1,7 @@
+
+
+.gallery .gallery-images > * {
+    width: 200px;
+    object-fit: contain;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+header {
+    height: 160px;
+    border-bottom: 5px solid black;
+    background-color: #a3242b;
+}
+
+.header-container {
+    height: 100%;
+}
+
+header .header-container .logo h2 {
+    font-family: mouse;
+    font-size: 5rem;
+    color: whitesmoke;
+    text-shadow: -8px -4px 2px #000000;
+    padding-inline-start: 1.25rem;
+}
+
+header .header-container .logo img {
+    width: 110px;
+    height: 110px;
+} 
