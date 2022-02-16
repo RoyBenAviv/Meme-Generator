@@ -15,10 +15,21 @@
     align-self: flex-start;
 }
 
-.editor .user-editor input {
+.editor .user-editor input:first-child {
     width: 250px;
+    height: 50px;
+    line-height:normal;
+    font-family: kid;
+    font-size: 1.5rem;
 }
 
-.editor .canvas-container .my-canvas {
-    background-color: white;
+::placeholder {
+    font-family: mouse;
+    line-height:50px;
+    color: #a3242b;
+}
+
+canvas {
+    border-radius: 40px;
+
 }

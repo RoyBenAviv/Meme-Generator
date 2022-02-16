@@ -15,7 +15,7 @@
         <div class="header-container main-layout flex align-center">
             <div class="logo flex align-center">
                 <img src="/images/other/logo.png">
-                <h2>Meme Generator</h2>
+                <h2>M<span>e</span>m<span>e</span> G<span>e</span>n<span>e</span>r<span>a</span>t<span>o</span>r</h2>
             </div>
         </div>
     </header>
@@ -31,16 +31,18 @@
             <canvas id="my-canvas" height="600" width="600"></canvas>
 
             <div class="user-editor flex column">
-                <input type="text" name="meme-text" placeholder="add text" oninput="onSetText(this)" />
+                <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
                 <input type="range" name="font-size" min="30" max="100" value="50" oninput="onSetSize(this.value);"/>
                 <span id="font-size">50</span>
                 <button onclick="onSwitchLine()">Switch Line</button>
                 <input type="color" name="color" value="#ffffff" oninput="onSetColor(this)" />
             </div>
         </div>
-
-
     </section>
+
+    <footer>
+    
+    </footer>
 
     <script src="js/meme.service.js"></script>
     <script src="js/meme.controller.js"></script>
