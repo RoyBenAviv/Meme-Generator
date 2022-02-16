@@ -25,16 +25,17 @@
     position: absolute;
     background: #333;
     opacity: 0;
-    top: 72%;
+    top: 70%;
     left: 10%;
     transform: scale(1.5);
-    width: 122px;
+    width: 121px;
     height: 30%;
     color: white;
     font-size: 0.8rem;
     text-align: center;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    padding-block-start: 0.875em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     transition: opacity 0.5s;
 }
 

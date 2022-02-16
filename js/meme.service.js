@@ -12,13 +12,13 @@ var gMeme = {
         {
             txt: '',
             size: 50,
-            align: 'left',
+            align: 'center',
             color: 'white',
         },
         {
             txt: '',
             size: 50,
-            align: 'left',
+            align: 'center',
             color: 'white',
         }
     ]
@@ -36,22 +36,22 @@ function _createImages() {
     gImgs = [
         _createImage(`./images/meme-images/1.jpg`, 'politics'),
         _createImage(`./images/meme-images/2.jpg`, 'animals'),
-        _createImage(`./images/meme-images/3.jpg`, 'politics'),
-        _createImage(`./images/meme-images/4.jpg`, 'politics'),
-        _createImage(`./images/meme-images/5.jpg`, 'politics'),
-        _createImage(`./images/meme-images/6.jpg`, 'politics'),
-        _createImage(`./images/meme-images/7.jpg`, 'politics'),
-        _createImage(`./images/meme-images/8.jpg`, 'politics'),
-        _createImage(`./images/meme-images/9.jpg`, 'politics'),
+        _createImage(`./images/meme-images/3.jpg`, 'animals, babys'),
+        _createImage(`./images/meme-images/4.jpg`, 'animals'),
+        _createImage(`./images/meme-images/5.jpg`, 'babys'),
+        _createImage(`./images/meme-images/6.jpg`, 'television'),
+        _createImage(`./images/meme-images/7.jpg`, 'babys'),
+        _createImage(`./images/meme-images/8.jpg`, 'television'),
+        _createImage(`./images/meme-images/9.jpg`, 'baby'),
         _createImage(`./images/meme-images/10.jpg`, 'politics'),
-        _createImage(`./images/meme-images/11.jpg`, 'politics'),
-        _createImage(`./images/meme-images/12.jpg`, 'politics'),
-        _createImage(`./images/meme-images/13.jpg`, 'politics'),
-        _createImage(`./images/meme-images/14.jpg`, 'politics'),
-        _createImage(`./images/meme-images/15.jpg`, 'politics'),
-        _createImage(`./images/meme-images/16.jpg`, 'politics'),
+        _createImage(`./images/meme-images/11.jpg`, 'television'),
+        _createImage(`./images/meme-images/12.jpg`, 'television'),
+        _createImage(`./images/meme-images/13.jpg`, 'movies'),
+        _createImage(`./images/meme-images/14.jpg`, 'movies'),
+        _createImage(`./images/meme-images/15.jpg`, 'television'),
+        _createImage(`./images/meme-images/16.jpg`, 'television'),
         _createImage(`./images/meme-images/17.jpg`, 'politics'),
-        _createImage(`./images/meme-images/18.jpg`, 'politics')
+        _createImage(`./images/meme-images/18.jpg`, 'movies')
     ]
 }
 

@@ -21,5 +21,6 @@ function renderGallery() {
 function onImgSelect(imageId) {
     document.querySelector('.gallery').style.display = 'none'
     document.querySelector('.editor').style.display = 'flex'
+    document.querySelector('.canvas-bg').style.opacity = '0.5'
     setImg(imageId)
 }

@@ -15,6 +15,7 @@ function onSwitchLine() {
 
 
 function onSetText(el) {
+    
     const memeTxt = el.value
     setLineTxt(memeTxt)
     renderMeme()
@@ -22,6 +23,7 @@ function onSetText(el) {
 
 function onSetColor(el) {
     const memeClr = el.value;
+    document.querySelector('input[name=meme-text]').style.color = memeClr
     setColorTxt(memeClr)
     renderMeme()
 }
@@ -39,8 +41,8 @@ function drawMemeFromGallery() {
     img.src = `./images/meme-images/${meme.selectedImgId}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-        drawText(meme.lines[0].txt, 100, 50, 0);
-        drawText(meme.lines[1].txt, 100, 550, 1);
+        drawText(meme.lines[0].txt, 200, 50, 0);
+        drawText(meme.lines[1].txt, 200, 350, 1);
     };
 }
 
