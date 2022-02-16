@@ -1,28 +1,21 @@
 'use strict';
 
-var gCanvas;
-var gCtx;
-
-function init() {
-    gCanvas = document.getElementById('my-canvas');
-    gCtx = gCanvas.getContext('2d');
-    renderMeme();
-
-}
+var gCanvas = document.getElementById('my-canvas');
+var gCtx = gCanvas.getContext('2d');
 
 function renderMeme() {
-    drawImgFromlocal();
+    drawMemeFromGallery();
 
 }
 
 function onSetText(el) {
     const memeTxt = el.value
-    updateText(memeTxt)
+    setLineTxt(memeTxt)
 
     renderMeme()
 }
 
-function drawImgFromlocal() {
+function drawMemeFromGallery() {
 
     const meme = getMemeForDisplay();
 
@@ -33,6 +26,7 @@ function drawImgFromlocal() {
         // drawText(meme.lines[0].txt, 100, 50)
         drawText(meme.lines[0].txt, 100, 50);
     };
+
 }
 
 function drawText(text, x, y) {
