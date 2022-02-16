@@ -35,7 +35,7 @@ function _createImage(url, keywords) {
 function _createImages() {
     gImgs = [
         _createImage(`./images/meme-images/1.jpg`, 'politics'),
-        _createImage(`./images/meme-images/2.jpg`, 'politics'),
+        _createImage(`./images/meme-images/2.jpg`, 'animals'),
         _createImage(`./images/meme-images/3.jpg`, 'politics'),
         _createImage(`./images/meme-images/4.jpg`, 'politics'),
         _createImage(`./images/meme-images/5.jpg`, 'politics'),
