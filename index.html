@@ -21,7 +21,7 @@
     </header>
     <section class="gallery main-layout">
 
-        <div class="gallery-images"></div>
+        <div class="gallery-images flex wrap justify-center"></div>
 
     </section>
 
@@ -34,7 +34,7 @@
                 <input type="text" name="meme-text" placeholder="add text" oninput="onSetText(this)" />
                 <input type="range" name="font-size" min="30" max="100" value="50" oninput="onSetSize(this.value);"/>
                 <span id="font-size">50</span>
-                <button>Switch Line</button>
+                <button onclick="onSwitchLine()">Switch Line</button>
                 <input type="color" name="color" value="#ffffff" oninput="onSetColor(this)" />
             </div>
         </div>

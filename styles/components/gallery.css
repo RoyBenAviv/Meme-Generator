@@ -1,7 +1,10 @@
-
+.gallery .gallery-images {
+    margin-block-start: 5rem;
+    padding: 20px;
+}
 
 .gallery .gallery-images > * {
     width: 200px;
-    object-fit: contain;
     cursor: pointer;
+    margin: 5px;
 }
