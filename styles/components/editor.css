@@ -24,7 +24,12 @@
 }
 
 .editor .user-options {
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 19px;
+    width: min-content;
+    justify-items: end;
+    align-items: center;
 }
 
 .editor .user-editor > *:not(:first-child, span) {
@@ -52,6 +57,11 @@
     line-height:50px;
     color: #0075ff;
     letter-spacing: 2px;
+}
+
+.editor .user-editor .range-container {
+    display: inline-block;
+    width: 70px;
 }
 
 .editor .user-editor input[type=range] {

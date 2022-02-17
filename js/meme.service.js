@@ -2,7 +2,7 @@
 
 var gImgs;
 var gImgId = 1;
-_createImages()
+_createImages();
 
 
 var gMeme = {
@@ -29,7 +29,7 @@ function _createImage(url, keywords) {
         id: gImgId++,
         url,
         keywords
-    }
+    };
 }
 
 function _createImages() {
@@ -52,7 +52,7 @@ function _createImages() {
         _createImage(`./images/meme-images/16.jpg`, 'television'),
         _createImage(`./images/meme-images/17.jpg`, 'politics'),
         _createImage(`./images/meme-images/18.jpg`, 'movies')
-    ]
+    ];
 }
 
 
@@ -63,24 +63,39 @@ function setImg(imageId) {
 }
 
 function setLineTxt(memeTxt) {
-    const memeLine = gMeme.lines[gMeme.selectedLineIdx]
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
     memeLine.txt = memeTxt;
 }
 
 function setColorTxt(memeClr) {
-    const memeLine = gMeme.lines[gMeme.selectedLineIdx]
-     memeLine.color = memeClr;
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    memeLine.color = memeClr;
 }
 
 function setTxtSize(txtSize) {
-    const memeLine = gMeme.lines[gMeme.selectedLineIdx]
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
     memeLine.size = txtSize;
 }
 
-function setLine() {
-    gMeme.selectedLineIdx = (gMeme.selectedLineIdx === 0) ? 1 : 0 ;
+function setAlign(direction) {
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    switch (direction) {
+        case 'left':
+            memeLine.align = 'left';
+            break;
+        case 'center':
+            memeLine.align = 'center';
+            break;
+        case 'right':
+            memeLine.align = 'right';
+            break;
+    }
+}
 
-    return gMeme.selectedLineIdx
+function setLine() {
+    gMeme.selectedLineIdx = (gMeme.selectedLineIdx === 0) ? 1 : 0;
+
+    return gMeme.selectedLineIdx;
 }
 
 function getMemeForDisplay() {

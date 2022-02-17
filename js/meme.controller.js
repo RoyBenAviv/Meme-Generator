@@ -52,12 +52,18 @@ function onSetColor(el) {
     renderMeme()
 }
 
+function onAlign(direction) {
+    setAlign(direction)
+    renderMeme()
+}
+
 function onSetSize(value) {
     document.getElementById("font-size").innerHTML = value;
     const txtSize = value
     setTxtSize(txtSize)
     renderMeme()
 }
+
 
 function drawMemeFromGallery() {
     const meme = getMemeForDisplay();
