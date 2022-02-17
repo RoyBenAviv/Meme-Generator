@@ -79,6 +79,8 @@ function setTxtSize(txtSize) {
 
 function setLine() {
     gMeme.selectedLineIdx = (gMeme.selectedLineIdx === 0) ? 1 : 0 ;
+
+    return gMeme.selectedLineIdx
 }
 
 function getMemeForDisplay() {

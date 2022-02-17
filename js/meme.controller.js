@@ -1,7 +1,30 @@
 'use strict';
 
-var gCanvas = document.getElementById('my-canvas');
-var gCtx = gCanvas.getContext('2d');
+var gCanvas
+var gCtx
+
+function initCanvas() {
+    gCanvas = document.getElementById('my-canvas');
+    gCtx = gCanvas.getContext('2d');
+    resizeCanvas();
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+        renderMeme()
+    });
+}
+
+
+function resizeCanvas() {
+
+    if(window.innerWidth < 490) {
+        gCanvas.width = 200 ;    
+        gCanvas.height = 200
+        
+    } else {
+        gCanvas.width = 400;    
+        gCanvas.height = 400
+    }
+}
 
 function renderMeme() {
     drawMemeFromGallery();
@@ -9,8 +32,9 @@ function renderMeme() {
 
 
 function onSwitchLine() {    
-    document.querySelector('input[name=meme-text]').value=''
-    setLine()
+    const meme = getMemeForDisplay();
+    var lineIdx = setLine()
+    document.querySelector('input[name=meme-text]').value = meme.lines[lineIdx].txt
 }
 
 
@@ -42,7 +66,7 @@ function drawMemeFromGallery() {
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
         drawText(meme.lines[0].txt, 200, 50, 0);
-        drawText(meme.lines[1].txt, 200, 350, 1);
+        drawText(meme.lines[1].txt, 200, gCanvas.width - 50, 1);
     };
 }
 

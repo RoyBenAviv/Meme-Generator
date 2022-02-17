@@ -2,6 +2,7 @@
 
 function init() {
     renderGallery();
+    initCanvas()
 }
 
 function renderGallery() {
