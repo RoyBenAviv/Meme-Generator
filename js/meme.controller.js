@@ -65,8 +65,8 @@ function drawMemeFromGallery() {
     img.src = `./images/meme-images/${meme.selectedImgId}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-        drawText(meme.lines[0].txt, 200, 50, 0);
-        drawText(meme.lines[1].txt, 200, gCanvas.width - 50, 1);
+        drawText(meme.lines[0].txt, gCanvas.width / 2, 50, 0);
+        drawText(meme.lines[1].txt, gCanvas.width / 2, gCanvas.height - 50, 1);
     };
 }
 

@@ -9,8 +9,8 @@ function renderGallery() {
     var images = getImgForDisplay();
     var strHtmls = images.map(image => {
         return `
-        <div style="position: relative;"> 
-        <img onclick="onImgSelect(${image.id})" class="meme-img" src="${image.url}">
+        <div onclick="onImgSelect(${image.id})" style="position: relative;"> 
+        <img class="meme-img" src="${image.url}">
         <div class="genre">Genre: ${image.keywords}</div>
         </div>
 

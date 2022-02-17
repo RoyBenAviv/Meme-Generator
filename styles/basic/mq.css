@@ -15,6 +15,10 @@
         flex-direction: column;
     }
 
+    .editor .user-editor {
+        margin-block-start: 1.4rem;
+    }
+
     .editor .user-editor input:first-child {
         width: 160px;
     }

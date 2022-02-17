@@ -55,6 +55,7 @@
 }
 
 .editor .user-editor input[type=range] {
+    cursor: pointer;
     -webkit-appearance: none;
     border-radius: 10px;
     width: 60px;
