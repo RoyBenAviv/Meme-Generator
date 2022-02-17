@@ -16,7 +16,6 @@
 }
 
 .gallery .gallery-images img {
-    width: 150px;
     border-radius: 30px;
     transition: 0.5s;
 }

@@ -1,11 +1,10 @@
 'use strict';
 
-var gCanvas;
-var gCtx;
+var gCanvas = document.getElementById('my-canvas');
+var gCtx = gCanvas.getContext('2d');
 
 function initCanvas() {
-    gCanvas = document.getElementById('my-canvas');
-    gCtx = gCanvas.getContext('2d');
+
     resizeCanvas();
     window.addEventListener('resize', () => {
         resizeCanvas();
@@ -34,10 +33,10 @@ function onSwitchLine() {
     document.querySelector('input[name=meme-text]').value = memeLine.txt;
 }
 
-// function onAddLine() {
-//     setLine()
-//     renderMeme();
-// }
+function onAddLine() {
+    setLine()
+    renderMeme();
+}
 
 function onSetText(el) {
     const memeTxt = el.value;

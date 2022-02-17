@@ -14,7 +14,7 @@
 
     <header>
         <div class="header-container flex align-center">
-            <div class="logo flex align-center">
+            <div onclick="onBack()" class="logo flex align-center">
                 <img src="/images/other/logo.png">
                 <h2>M<span>e</span>m<span>e</span> G<span>e</span>n<span>e</span>r<span>a</span>t<span>o</span>r</h2>
             </div>
@@ -52,7 +52,7 @@
                         <option value="ARIAL">Arial</option>
                         <option value="VERANDA">Veranda</option>
                     </select>
-                    <div class="range-container">
+                    <div title="font size" class="range-container">
                         <input type="range" name="font-size" min="25" max="99" value="50"
                             oninput="onSetSize(this.value)" />
                         <span>font size: <span id="font-size">50</span></span>
@@ -65,10 +65,10 @@
                         <input title="change color" type="color" name="color" value="#ffffff"
                             oninput="onSetColor(this)" />
                     </div>
-                    <button title="align left" onclick="onAlign('left')"><i class="fa-solid fa-align-left"></i></button>
-                    <button title="align center" onclick="onAlign('center')"><i
+                    <button class="left" title="align left" onclick="onAlign('left')"><i class="fa-solid fa-align-left"></i></button>
+                    <button class="center" title="align center" onclick="onAlign('center')"><i
                             class="fa-solid fa-align-justify"></i></button>
-                    <button title="align right" onclick="onAlign('right')"><i
+                    <button class="right" title="align right" onclick="onAlign('right')"><i
                             class="fa-solid fa-align-right"></i></button>
                     <button class="download"><a title="download meme" onclick="onDownload(this)"
                             download="my-meme.jpg"><i class="fa-solid fa-download"></i></a></button>
@@ -83,8 +83,8 @@
     <footer>
     </footer>
     <script src="js/upload-service.js"></script>
-    <script src="js/meme.service.js"></script>
     <script src="js/meme.controller.js"></script>
+    <script src="js/meme.service.js"></script>
     <script src="js/gallery.controller.js"></script>
 </body>
 

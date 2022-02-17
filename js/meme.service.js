@@ -9,22 +9,22 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'aaa',
+            txt: 'Meme line 1',
             size: 50,
             align: 'center',
             color: 'white',
             font: 'Impact',
-            posX: 100,
-            posY: 50
+            posX: gCanvas.width / 2,
+            posY: 80
         },
         {
-            txt: 'sss',
+            txt: 'Meme line 2',
             size: 50,
             align: 'center',
             color: 'white',
             font: 'Impact',
-            posX: 100,
-            posY: 150
+            posX: gCanvas.width / 2,
+            posY: gCanvas.height - 80
         }
     ]
 };
@@ -67,13 +67,13 @@ function setImg(imageId) {
 
 function setLine() {
     gMeme.lines.push({
-        txt: 'new text',
+        txt: `new text ${gMeme.lines.length}`,
         size: 50,
         align: 'center',
         color: 'white',
         font: 'Impact',
-        posX: 100,
-        posY: 100
+        posX: gCanvas.width / 2,
+        posY: gCanvas.height / 2
     })
 }
 
@@ -85,7 +85,6 @@ function setLineTxt(memeTxt) {
 function setColorTxt(memeClr) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
     memeLine.color = memeClr;
-    console.log(gMeme.selectedLineIdx)
 }
 
 function setTxtSize(txtSize) {
@@ -125,13 +124,11 @@ function setAlign(direction) {
 
 function switchLine() {
     gMeme.selectedLineIdx++
-    console.log(gMeme.selectedLineIdx)
     if(gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 }
 
 function getMemeLine() {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
-    console.log(memeLine)
     return memeLine;
 }
 

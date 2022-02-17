@@ -1,5 +1,4 @@
 header {
-    height: 200px;
     border-bottom: 5px solid wheat;
     background-color: #a3242b;
 }
@@ -9,7 +8,7 @@ header {
 }
 
 header .header-container .logo {
-    user-select: none;
+    cursor: pointer;
 }
 
 header .header-container .logo h2 {
