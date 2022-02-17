@@ -32,10 +32,6 @@
                 <li onclick="toggle3d()">3D MODE: <span class="switch">OFF</span></li>
             </ul>
     </nav>
-
-
-
-
     </div>
 
     <section class="gallery flex column justify-center align-center">
@@ -50,14 +46,20 @@
 
             <div class="user-editor flex column">
                 <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
-                <div class="user-options flex space-between wrap">
+                <div class="user-options">
+                    <select class="font-select" onchange="onSetFont(this.value)">
+                        <option value="IMPACT">Impact</option>
+                        <option value="ARIAL">Arial</option>
+                        <option value="VERANDA">Veranda</option>
+                    </select>
                     <div class="range-container">
                         <input type="range" name="font-size" min="25" max="99" value="50"
                             oninput="onSetSize(this.value)" />
                         <span>font size: <span id="font-size">50</span></span>
                     </div>
 
-                    <button title="switch line" onclick="onSwitchLine()"><i class="fa-solid fa-plus"></i></button>
+                    <button title="add line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
+                    <button title="switch line" onclick="onSwitchLine()"><img src="./images/other/switch.png"></button>
                     <div class="color">
                         <button><i class="fa-solid fa-paintbrush"></i></button>
                         <input title="change color" type="color" name="color" value="#ffffff"

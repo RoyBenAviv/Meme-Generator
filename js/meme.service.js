@@ -4,22 +4,27 @@ var gImgs;
 var gImgId = 1;
 _createImages();
 
-
 var gMeme = {
     selectedImgId: 0,
     selectedLineIdx: 0,
     lines: [
         {
-            txt: '',
+            txt: 'aaa',
             size: 50,
             align: 'center',
             color: 'white',
+            font: 'Impact',
+            posX: 100,
+            posY: 50
         },
         {
-            txt: '',
+            txt: 'sss',
             size: 50,
             align: 'center',
             color: 'white',
+            font: 'Impact',
+            posX: 100,
+            posY: 150
         }
     ]
 };
@@ -55,11 +60,21 @@ function _createImages() {
     ];
 }
 
-
-
 function setImg(imageId) {
     gMeme.selectedImgId = imageId;
     renderMeme();
+}
+
+function setLine() {
+    gMeme.lines.push({
+        txt: 'new text',
+        size: 50,
+        align: 'center',
+        color: 'white',
+        font: 'Impact',
+        posX: 100,
+        posY: 100
+    })
 }
 
 function setLineTxt(memeTxt) {
@@ -70,11 +85,27 @@ function setLineTxt(memeTxt) {
 function setColorTxt(memeClr) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
     memeLine.color = memeClr;
+    console.log(gMeme.selectedLineIdx)
 }
 
 function setTxtSize(txtSize) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
     memeLine.size = txtSize;
+}
+
+function setTxtFont(txtFont) {
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    switch (txtFont) {
+        case 'IMPACT':
+            memeLine.font = 'Impact';
+            break;
+        case 'ARIAL':
+            memeLine.font = 'Arial';
+            break;
+        case 'VERANDA':
+            memeLine.font = 'Veranda';
+            break;
+    }
 }
 
 function setAlign(direction) {
@@ -92,12 +123,15 @@ function setAlign(direction) {
     }
 }
 
-function setLine() {
-    gMeme.selectedLineIdx = (gMeme.selectedLineIdx === 0) ? 1 : 0;
+function switchLine() {
+    gMeme.selectedLineIdx++
+    console.log(gMeme.selectedLineIdx)
+    if(gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 }
 
-function getMemeLineIdx() {
+function getMemeLine() {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    console.log(memeLine)
     return memeLine;
 }
 

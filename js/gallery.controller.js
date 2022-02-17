@@ -12,9 +12,7 @@ function renderGallery() {
         <div onclick="onImgSelect(${image.id})" style="position: relative;"> 
         <img class="meme-img" src="${image.url}">
         <div class="genre">Genre: ${image.keywords}</div>
-        </div>
-
-        `;
+        </div>`;
     });
     document.querySelector('.gallery-images').innerHTML = strHtmls.join('');
 }

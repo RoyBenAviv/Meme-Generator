@@ -6,8 +6,7 @@ function uploadImg() {
 
     function onSuccess(uploadedImgUrl) {
         const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)        
-        var popup = window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`, '', 'width=800,height=500');
-        popup.focus()
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`);
     }
     
     doUploadImg(imgDataUrl, onSuccess);
