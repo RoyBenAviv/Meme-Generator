@@ -3,3 +3,17 @@
     height: 110px;
     background-color: black;
 }
+
+.nav-container .nav-content .nav-options {
+    gap: 2.5rem;
+}
+
+.nav-container .nav-content .nav-options > li {
+    color: wheat;
+    cursor: pointer;
+    text-decoration: overline;
+}
+
+.nav-container .nav-content .nav-options > li:hover {
+    color:#a3242b;
+}

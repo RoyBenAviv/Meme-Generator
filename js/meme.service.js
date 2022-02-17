@@ -94,8 +94,11 @@ function setAlign(direction) {
 
 function setLine() {
     gMeme.selectedLineIdx = (gMeme.selectedLineIdx === 0) ? 1 : 0;
+}
 
-    return gMeme.selectedLineIdx;
+function getMemeLineIdx() {
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    return memeLine;
 }
 
 function getMemeForDisplay() {

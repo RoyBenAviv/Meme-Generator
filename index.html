@@ -20,24 +20,24 @@
             </div>
         </div>
     </header>
-    <nav class="nav-container flex column align-center">
-        <div class="nav-content main-layout">
-            <h1>Choose your meme!</h1>
-            <ul class="clean-list flex space-between">
-                <li><a href="">Feeling Flexible</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            
-            </ul>   
-        </nav>
+    <nav class="nav-container">
+        <div class="nav-content main-layout flex column align-center">
+            <h1>Style your meme!</h1>
+            <ul class="nav-options nav-gallery clean-list flex space-between">
+                <li>Feeling Flexible</li>
+                <li>My Memes</li>
+            </ul>
+            <ul class="nav-options nav-canvas nav-gallery clean-list space-between" hidden>
+                <li onclick="onBack()">Go Back</li>
+                <li onclick="toggle3d()">3D MODE: <span class="switch">OFF</span></li>
+            </ul>
+    </nav>
 
 
 
-            
-        </div>
-  
+
+    </div>
+
     <section class="gallery flex column justify-center align-center">
         <div class="gallery-images main-layout flex wrap justify-center"></div>
 
@@ -47,26 +47,32 @@
         <div class="canvas-container main-layout flex">
 
             <canvas id="my-canvas" height="450" width="450"></canvas>
-            
+
             <div class="user-editor flex column">
                 <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
                 <div class="user-options flex space-between wrap">
                     <div class="range-container">
-                        <input type="range" name="font-size" min="25" max="99" value="50" oninput="onSetSize(this.value)"/>
+                        <input type="range" name="font-size" min="25" max="99" value="50"
+                            oninput="onSetSize(this.value)" />
                         <span>font size: <span id="font-size">50</span></span>
                     </div>
-                    
+
                     <button title="switch line" onclick="onSwitchLine()"><i class="fa-solid fa-plus"></i></button>
                     <div class="color">
                         <button><i class="fa-solid fa-paintbrush"></i></button>
-                        <input title="change color" type="color" name="color" value="#ffffff" oninput="onSetColor(this)" />
+                        <input title="change color" type="color" name="color" value="#ffffff"
+                            oninput="onSetColor(this)" />
                     </div>
                     <button title="align left" onclick="onAlign('left')"><i class="fa-solid fa-align-left"></i></button>
-                    <button title="align center" onclick="onAlign('center')"><i class="fa-solid fa-align-justify"></i></button>
-                    <button title="align right" onclick="onAlign('right')"><i class="fa-solid fa-align-right"></i></button>
-                    <!-- <button onclick="onSet3d()"><i class="fa-brands fa-unity"></i></button> -->
+                    <button title="align center" onclick="onAlign('center')"><i
+                            class="fa-solid fa-align-justify"></i></button>
+                    <button title="align right" onclick="onAlign('right')"><i
+                            class="fa-solid fa-align-right"></i></button>
+                    <button class="download"><a title="download meme" onclick="onDownload(this)"
+                            download="my-meme.jpg"><i class="fa-solid fa-download"></i></a></button>
+                    <button title="share on facebook" onclick="uploadImg()" class="share"><i
+                            class="fa-solid fa-share"></i></button>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -74,7 +80,7 @@
 
     <footer>
     </footer>
-
+    <script src="js/upload-service.js"></script>
     <script src="js/meme.service.js"></script>
     <script src="js/meme.controller.js"></script>
     <script src="js/gallery.controller.js"></script>

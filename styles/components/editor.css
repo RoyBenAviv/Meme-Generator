@@ -2,14 +2,20 @@
     background-color: rgba(245, 222, 179, 0.973);
     padding: 2em;
     border-radius: 30px;
-    transform:
-    perspective(55em)
-    rotateX(15deg);
     box-shadow:
     rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
     rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
     border: 5px solid black;
      border-radius: 30px;
+     transition: transform 0.8s;
+}
+
+.canvas-container-3d {
+    transform:
+    perspective(55em)
+    rotateX(35deg);
+
+    transition: transform 0.8s;
 }
 
 .editor {
@@ -21,11 +27,13 @@
     border-radius: 40px;
     padding: 2em;
     background-color: #a3242b;
+    margin-block-start: 1.4rem;
 }
 
 .editor .user-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 19px;
     width: min-content;
     justify-items: end;
@@ -77,11 +85,19 @@
     display: inline-block;
 }
 
-.editor .user-editor button {
+.editor .user-editor button, a {
     width: 40px;
     height: 40px;
     color: #0075ff;
     cursor: pointer;
+}
+
+.editor .user-editor .download {
+    grid-row: 5;
+}
+.editor .user-editor .share {
+    grid-row: 5;
+    grid-column: 2;
 }
 
 input[type="color"] {
