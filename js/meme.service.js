@@ -2,6 +2,8 @@
 
 var gImgs;
 var gImgId = 1;
+var gFilterImg
+
 _createImages();
 
 var gMeme = {
@@ -39,25 +41,37 @@ function _createImage(url, keywords) {
 
 function _createImages() {
     gImgs = [
-        _createImage(`./images/meme-images/1.jpg`, 'politics'),
-        _createImage(`./images/meme-images/2.jpg`, 'animals'),
-        _createImage(`./images/meme-images/3.jpg`, 'animals, babys'),
-        _createImage(`./images/meme-images/4.jpg`, 'animals'),
-        _createImage(`./images/meme-images/5.jpg`, 'babys'),
-        _createImage(`./images/meme-images/6.jpg`, 'television'),
-        _createImage(`./images/meme-images/7.jpg`, 'babys'),
-        _createImage(`./images/meme-images/8.jpg`, 'television'),
-        _createImage(`./images/meme-images/9.jpg`, 'baby'),
-        _createImage(`./images/meme-images/10.jpg`, 'politics'),
-        _createImage(`./images/meme-images/11.jpg`, 'television'),
-        _createImage(`./images/meme-images/12.jpg`, 'television'),
-        _createImage(`./images/meme-images/13.jpg`, 'movies'),
-        _createImage(`./images/meme-images/14.jpg`, 'movies'),
-        _createImage(`./images/meme-images/15.jpg`, 'television'),
-        _createImage(`./images/meme-images/16.jpg`, 'television'),
-        _createImage(`./images/meme-images/17.jpg`, 'politics'),
-        _createImage(`./images/meme-images/18.jpg`, 'movies')
+        _createImage(`./images/meme-images/1.jpg`, 'Politics'),
+        _createImage(`./images/meme-images/2.jpg`, 'Animals'),
+        _createImage(`./images/meme-images/3.jpg`, 'Animals'),
+        _createImage(`./images/meme-images/4.jpg`, 'Animals'),
+        _createImage(`./images/meme-images/5.jpg`, 'Babys'),
+        _createImage(`./images/meme-images/6.jpg`, 'TV'),
+        _createImage(`./images/meme-images/7.jpg`, 'Babys'),
+        _createImage(`./images/meme-images/8.jpg`, 'TV'),
+        _createImage(`./images/meme-images/9.jpg`, 'Babys'),
+        _createImage(`./images/meme-images/10.jpg`, 'Politics'),
+        _createImage(`./images/meme-images/11.jpg`, 'TV'),
+        _createImage(`./images/meme-images/12.jpg`, 'TV'),
+        _createImage(`./images/meme-images/13.jpg`, 'Movies'),
+        _createImage(`./images/meme-images/14.jpg`, 'Movies'),
+        _createImage(`./images/meme-images/15.jpg`, 'TV'),
+        _createImage(`./images/meme-images/16.jpg`, 'TV'),
+        _createImage(`./images/meme-images/17.jpg`, 'Politics'),
+        _createImage(`./images/meme-images/18.jpg`, 'Movies')
     ];
+}
+
+function getImgs() {
+    const images = gImgs.filter(img => {
+        const keywords = img.keywords.toUpperCase()
+        return keywords === gFilterImg
+    })
+    return (!images.length) ? gImgs : images;
+}
+
+function filterImage(value) {
+    gFilterImg = value.toUpperCase();
 }
 
 function setImg(imageId) {
@@ -135,9 +149,4 @@ function getMemeLine() {
 function getMemeForDisplay() {
     const meme = gMeme;
     return meme;
-}
-
-function getImgForDisplay() {
-    const images = gImgs;
-    return images;
 }

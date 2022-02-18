@@ -73,7 +73,7 @@ function onSetFont(value) {
 function drawMemeFromGallery() {
     const meme = getMemeForDisplay();
     var img = new Image();
-    img.src = `./images/meme-images/${meme.selectedImgId}.jpg`;
+    img.src = `./images/meme-images/${meme.selectedImgId + 1}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
         renderTxt()
@@ -122,10 +122,9 @@ function onBack() {
     document.querySelector('.nav-gallery').style.display = 'flex'
     document.querySelector('.nav-canvas').style.display = 'none'
     // Clear Canvas
-    meme.lines.forEach(line => {
-        line.txt = ''
-    })
+    // meme.lines.forEach(line => {
+    //     line.txt = ''
+    // })
     document.querySelector('input[name=meme-text]').value = '';
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
 }
-

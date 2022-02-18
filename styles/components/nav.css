@@ -6,6 +6,8 @@
 
 .nav-container .nav-content .nav-options {
     gap: 2.5rem;
+    width: 100%;
+    justify-content: center;
 }
 
 .nav-container .nav-content .nav-options > li {
@@ -17,3 +19,24 @@
 .nav-container .nav-content .nav-options > li:hover {
     color:#a3242b;
 }
+
+.nav-container .nav-content .nav-options > li #category-img {
+    width: 120px;
+    /* height: 20px; */
+    border: none;
+    border-top: 1px solid wheat;
+    background-color: transparent;
+    color: wheat;
+    font-family: kid;
+    font-size: 1rem;
+}
+
+.nav-container .nav-content .nav-options > li #category-img::placeholder {
+    color: wheat;
+    cursor: pointer;
+    text-decoration: overline;
+    font-family: kid;
+    width: 100%;
+    font-size: 1rem;
+}
+
