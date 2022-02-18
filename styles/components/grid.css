@@ -13,24 +13,41 @@
     ". . download share";
 }
 
+@media (max-width: 900px) {
+    .editor .user-options {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "input input plus delete"
+        "font size switch color"
+        ". left center right"
+        ". . download share";
+    }
+}
+
+
 @media (max-width: 490px) {
     .editor .user-options {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-gap: 10px;
         grid-template-areas: 
-        "input input input delete"
-        "font plus switch color"
+        "input input input plus"
+        "font color switch delete"
         "size left center right"
         ". . download share";
         justify-items: left;
     }
-    /* .editor .user-editor input:first-child {
+
+
+
+
+    .editor .user-editor input:first-child {
         justify-self: left;
     }
     .left {
         justify-self: center;
-    } */
+    }
 }
 
 .editor .user-editor input:first-child {
