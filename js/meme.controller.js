@@ -120,9 +120,23 @@ function onBack() {
     document.querySelector('.canvas-bg').style.opacity = '0';
     document.querySelector('.nav-gallery').style.display = 'flex'
     document.querySelector('.nav-canvas').style.display = 'none'
-    // Clear Canvas
-    meme.lines[0].txt = 'Meme Line1'
-    meme.lines[1].txt = 'Meme Line2'
+
+    resetCanvas()
+}
+
+function resetCanvas() {
+    const meme = getMemeForDisplay()
+
+    var lineIdx = 1;
+    meme.lines.length = 2
+    
+    meme.lines.forEach(line => {
+        line.txt = `Meme Line ${lineIdx++}`
+        line.size = 50
+        line.align = 'center'
+        line.color = 'white'
+        line.font = 'impact'
+    })
     document.querySelector('input[name=meme-text]').value = '';
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
 }

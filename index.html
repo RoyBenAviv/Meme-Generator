@@ -59,8 +59,11 @@
             <canvas id="my-canvas" height="450" width="450"></canvas>
 
             <div class="user-editor flex column">
-                <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
+                
                 <div class="user-options">
+                    <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
+                    <button class="add" title="add line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
+                    <button class="delete" title="delete line" onclick="onDeleteLine()"><i class="fa-solid fa-trash-can"></i></button>
                     <select class="font-select" onchange="onSetFont(this.value)">
                         <option value="IMPACT">Impact</option>
                         <option value="ARIAL">Arial</option>
@@ -68,12 +71,11 @@
                     </select>
                     <div title="font size" class="range-container">
                         <input type="range" name="font-size" min="25" max="99" value="50"
-                            oninput="onSetSize(this.value)" />
+                        oninput="onSetSize(this.value)" />
                         <span>font size: <span id="font-size">50</span></span>
                     </div>
-
-                    <button title="add line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
-                    <button title="switch line" onclick="onSwitchLine()"><img src="./images/other/switch.png"></button>
+                    
+                    <button class="switch-line" title="switch line" onclick="onSwitchLine()"><img src="./images/other/switch.png"></button>
                     <div class="color">
                         <button><i class="fa-solid fa-paintbrush"></i></button>
                         <input title="change color" type="color" name="color" value="#ffffff"
