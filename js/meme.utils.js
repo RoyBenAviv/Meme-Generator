@@ -29,8 +29,8 @@ function getRandomTxt() {
         ];
 
     var idx = getRandomInt(0, words.length - 1);
-    var randomWord = words[idx];
-    return randomWord;
+    var randomTxt = words[idx];
+    return randomTxt;
 }
 
 

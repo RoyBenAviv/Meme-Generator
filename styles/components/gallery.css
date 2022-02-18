@@ -11,11 +11,11 @@
     gap: 40px;
 }
 
-.gallery .gallery-images > * {
+.meme-img {
     cursor: pointer;
 }
 
-.gallery .gallery-images img {
+.meme-img {
     border-radius: 30px;
     transition: 0.5s;
 }
@@ -38,7 +38,7 @@
     transition: opacity 0.5s;
 }
 
-.gallery .gallery-images img:hover {
+.meme-img:hover {
     transform: scale(1.2);
     box-shadow: 0px -4px 24px 5px #000000;
 }

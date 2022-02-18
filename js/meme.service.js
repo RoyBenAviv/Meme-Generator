@@ -1,5 +1,8 @@
 'use strict';
 
+const STORAGE_KEY = 'memesDB'
+
+var gMyMemes = []
 var gImgs;
 var gImgId = 1;
 var gFilterImg;
@@ -18,7 +21,7 @@ var gMeme = {
             font: 'Impact',
             posX: gCanvas.width / 2,
             posY: 80,
-            stroke: 0
+            stroke: 1
         },
         {
             txt: 'Meme line 2',
@@ -28,7 +31,7 @@ var gMeme = {
             font: 'Impact',
             posX: gCanvas.width / 2,
             posY: gCanvas.height - 80,
-            stroke: 0
+            stroke: 1
         }
     ]
 };
@@ -93,7 +96,7 @@ function setRandomMeme(imageId) {
             color: getRandomColor(),
             font: 'Impact',
             posX: gCanvas.width / 2,
-            posY: calcPosY()
+            posY: calcPosY() + 40
         });
     }
     renderMeme();
@@ -111,7 +114,7 @@ function calcPosY() {
     if (gMeme.lines.length === 2) lastLine = gMeme.lines[0]
     else lastLine = gMeme.lines[gMeme.lines.length - 1]
     if(!gMeme.lines.length) return 80
-    if (lastLine.posY > gCanvas.height - 30) return lastLine.posY = gMeme.lines[0].posY + 40
+    if (lastLine.posY > gCanvas.height - 30) return lastLine.posY = gMeme.lines[0].posY + 90
     return lastLine.posY + 50
 }
 
@@ -123,7 +126,8 @@ function setLine() {
         color: 'white',
         font: 'Impact',
         posX: gCanvas.width / 2,
-        posY: calcPosY()
+        posY: calcPosY(),
+        stroke: 1
     });
 }
 
@@ -195,4 +199,20 @@ function getMemeLine() {
 function getMemeForDisplay() {
     const meme = gMeme;
     return meme;
+}
+
+function saveMyMemes(memeCanvas) {
+
+    var memeInfo = {...gMeme}
+    const myMeme = {
+        img: memeCanvas.toDataURL(),
+        meme: memeInfo
+    }
+    gMyMemes.push(myMeme)
+
+    _saveMemesToStorage()
+}
+
+function _saveMemesToStorage() {
+    saveToStorage(STORAGE_KEY, gMyMemes);
 }

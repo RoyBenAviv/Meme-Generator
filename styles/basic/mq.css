@@ -1,5 +1,5 @@
 @media (max-width: 490px) {
-    .gallery .gallery-images img {
+    .meme-img {
         width: 100px;
     }
     .editor .user-editor .font-select {
@@ -43,7 +43,7 @@
         width: 100%;
     }
 
-    .gallery .gallery-images img {
+    .meme-img {
         width: 150px;
     }
     

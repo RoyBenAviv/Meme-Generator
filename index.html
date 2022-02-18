@@ -28,7 +28,7 @@
                     <img class="drake1" src="/images/other/drake1.png">
                 </li>
 
-                <li>My Memes</li>
+                <li onclick="openMyMemes()">My Memes</li>
                 <li>
                     <label for="category-img"><img class="drake2" src="/images/other/drake2.png"></label>
                     <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img"
@@ -92,6 +92,8 @@
                             class="fa-solid fa-align-justify"></i></button>
                     <button class="right" title="align right" onclick="onAlign('right')"><i
                             class="fa-solid fa-align-right"></i></button>
+                    <button class="save" onclick="onSave()" title="save meme">
+                        <i class="fa-solid fa-floppy-disk"></i></button>
                     <button class="download"><a title="download meme" onclick="onDownload(this)"
                             download="my-meme.jpg"><i class="fa-solid fa-download"></i></a></button>
                     <button title="share on facebook" onclick="uploadImg()" class="share"><i
@@ -100,15 +102,22 @@
             </div>
         </div>
     </section>
+    <section class="memes-section" hidden>
+        <div class="main-layout my-memes-gallery flex">
+        </div>
+
+    </section>
     <img class="canvas-bg" src="images/other/background.png">
 
     <footer>
     </footer>
+    <script src="js/storage.service.js"></script>
     <script src="js/meme.utils.js"></script>
     <script src="js/upload-service.js"></script>
     <script src="js/meme.controller.js"></script>
     <script src="js/meme.service.js"></script>
     <script src="js/gallery.controller.js"></script>
+    <script src="js/my-memes.controller.js"></script>
 </body>
 
 </html>

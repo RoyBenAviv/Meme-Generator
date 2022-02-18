@@ -10,7 +10,7 @@
     "font size color stroke"
     "delete left center right"
     ". . . ."
-    ". . download share";
+    ". save download share";
 }
 
 @media (max-width: 900px) {
@@ -21,7 +21,7 @@
         "input input plus switch"
         "font size color stroke"
         "delete left center right"
-        ". . download share";
+        ". save download share";
     }
 }
 
@@ -35,7 +35,7 @@
         "input input input plus"
         "font color stroke switch"
         "size left center right"
-        "delete . download share";
+        "delete save download share";
         justify-items: left;
     }
 
@@ -93,6 +93,11 @@
 
 .color {
     grid-area: color;
+}
+
+.editor .user-editor .save {
+    grid-area: save;
+    justify-self: end;
 }
 
 .editor .user-editor .download {

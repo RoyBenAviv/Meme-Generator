@@ -41,9 +41,9 @@ function onRandomMeme() {
     setRandomMeme(drawnImage.id)
 }
 
-
 function switchSections() {
     document.querySelector('.gallery').style.display = 'none'
+    document.querySelector('.memes-section').style.display = 'none'
     document.querySelector('.editor').style.display = 'flex'
     document.querySelector('.canvas-bg').style.opacity = '0.5'
     document.querySelector('.nav-gallery').style.display = 'none'
