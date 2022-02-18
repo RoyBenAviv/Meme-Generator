@@ -6,9 +6,9 @@
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 15px;
     grid-template-areas: 
-    "input input plus delete"
-    "font size switch color"
-    ". left center right"
+    "input input plus switch"
+    "font size color stroke"
+    "delete left center right"
     ". . . ."
     ". . download share";
 }
@@ -18,9 +18,9 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas: 
-        "input input plus delete"
-        "font size switch color"
-        ". left center right"
+        "input input plus switch"
+        "font size color stroke"
+        "delete left center right"
         ". . download share";
     }
 }
@@ -30,12 +30,12 @@
     .editor .user-options {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 10px;
+        grid-gap: 7px;
         grid-template-areas: 
         "input input input plus"
-        "font color switch delete"
+        "font color stroke switch"
         "size left center right"
-        ". . download share";
+        "delete . download share";
         justify-items: left;
     }
 
@@ -64,6 +64,10 @@
 
 .switch-line {
     grid-area: switch;
+}
+
+.stroke {
+    grid-area: stroke;
 }
 
 .font-select {
