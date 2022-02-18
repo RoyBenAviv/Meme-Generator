@@ -79,6 +79,16 @@ function setImg(imageId) {
     renderMeme();
 }
 
+function setRandomMeme(imageId) {
+    gMeme.selectedImgId = imageId;
+    gMeme.lines.forEach(line => {
+        line.txt = getRandomTxt()
+        line.color = getRandomColor()
+    })
+
+    renderMeme();
+}
+
 function setLine() {
     gMeme.lines.push({
         txt: `new text ${gMeme.lines.length}`,

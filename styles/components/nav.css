@@ -14,7 +14,7 @@
 }
 
 .nav-container .nav-content .nav-options {
-    gap: 2.5rem;
+    gap: 6rem;
     width: 100%;
     justify-content: center;
 }
@@ -35,7 +35,7 @@
     border: none;
     border-top: 1px solid wheat;
     background-color: transparent;
-    color: wheat;
+    color: #a3242b;
     font-family: kid;
     font-size: 1rem;
 }
@@ -49,14 +49,16 @@
     font-size: 1rem;
 }
 
-.nav-container .nav-content .nav-options li:first-child {
+.nav-options li:first-child, .nav-options li:last-child {
     position: relative;
 }
 
-.nav-container .nav-content .nav-options li:first-child img {
+.drake1, .drake2 {
+    cursor: pointer;
     position: absolute;
-    width: 50px;
-    bottom: 0;
-    right: 130px;
+    width: 60px;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%);
 }
 

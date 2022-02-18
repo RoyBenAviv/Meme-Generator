@@ -30,10 +30,6 @@ function getRandomImg() {
     return drawnImage
 }
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
 function onImgSelect(imageId) {
     switchSections()
     setImg(imageId)
@@ -42,7 +38,7 @@ function onImgSelect(imageId) {
 function onRandomMeme() {
     switchSections()
     const drawnImage = getRandomImg()
-    setImg(drawnImage.id)
+    setRandomMeme(drawnImage.id)
 }
 
 

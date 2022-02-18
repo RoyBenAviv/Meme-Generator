@@ -81,7 +81,6 @@ function drawMemeFromGallery() {
 }
 
 function renderTxt() {
-
     var currLineIdx = 0
     const meme = getMemeForDisplay();
     meme.lines.forEach(line => {
@@ -122,9 +121,8 @@ function onBack() {
     document.querySelector('.nav-gallery').style.display = 'flex'
     document.querySelector('.nav-canvas').style.display = 'none'
     // Clear Canvas
-    // meme.lines.forEach(line => {
-    //     line.txt = ''
-    // })
+    meme.lines[0].txt = 'Meme Line1'
+    meme.lines[1].txt = 'Meme Line2'
     document.querySelector('input[name=meme-text]').value = '';
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
 }

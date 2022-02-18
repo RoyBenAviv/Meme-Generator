@@ -25,11 +25,12 @@
             <h1>Style your meme!</h1>
             <ul class="nav-options nav-gallery clean-list flex">
                 <li onclick="onRandomMeme()">Feeling Flexible
-                    <img src="/images/other/drake.png">
+                    <img class="drake1" src="/images/other/drake1.png">
                 </li>
                 
                 <li>My Memes</li>
                 <li>
+                    <label for="category-img"><img class="drake2" src="/images/other/drake2.png"></label>
                         <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img" placeholder="Choose Genre">
                         <datalist id="categories">
                             <option value="Politics">
@@ -96,6 +97,7 @@
 
     <footer>
     </footer>
+    <script src="js/meme.utils.js"></script>
     <script src="js/upload-service.js"></script>
     <script src="js/meme.controller.js"></script>
     <script src="js/meme.service.js"></script>
