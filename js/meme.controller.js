@@ -2,6 +2,7 @@
 
 var gCanvas = document.getElementById('my-canvas');
 var gCtx = gCanvas.getContext('2d');
+var gStroke = 0
 
 function initCanvas() {
 
@@ -11,7 +12,6 @@ function initCanvas() {
         renderMeme();
     });
 }
-
 
 function resizeCanvas() {
     if (window.innerWidth < 490) {
@@ -56,6 +56,13 @@ function onSetColor(el) {
     renderMeme();
 }
 
+function onStrokeTxt() {
+    gStroke++
+    if(gStroke >= 5) return gStroke = 0
+    setStrokeTxt(gStroke);
+    renderMeme();
+}
+
 function onAlign(direction) {
     setAlign(direction);
     renderMeme();
@@ -96,7 +103,7 @@ function renderTxt() {
 function drawText(text, x, y, selectedLineIdx) {
     const meme = getMemeForDisplay();
     gCtx.strokeStyle = 'black';
-    gCtx.lineWidth = 3;
+    gCtx.lineWidth = meme.lines[selectedLineIdx].stroke;
     gCtx.fillStyle = `${meme.lines[selectedLineIdx].color}`;
     gCtx.textAlign = `${meme.lines[selectedLineIdx].align}`;
     gCtx.font = `${meme.lines[selectedLineIdx].size}px ${meme.lines[selectedLineIdx].font}`;
@@ -134,13 +141,13 @@ function resetCanvas() {
 
     var lineIdx = 1;
     meme.lines.length = 2
-    
     meme.lines.forEach(line => {
         line.txt = `Meme Line ${lineIdx++}`
         line.size = 50
         line.align = 'center'
         line.color = 'white'
         line.font = 'impact'
+        line.stroke = 0
     })
     document.querySelector('input[name=meme-text]').value = '';
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);

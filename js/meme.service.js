@@ -17,7 +17,8 @@ var gMeme = {
             color: 'white',
             font: 'Impact',
             posX: gCanvas.width / 2,
-            posY: 80
+            posY: 80,
+            stroke: 0
         },
         {
             txt: 'Meme line 2',
@@ -26,7 +27,8 @@ var gMeme = {
             color: 'white',
             font: 'Impact',
             posX: gCanvas.width / 2,
-            posY: gCanvas.height - 80
+            posY: gCanvas.height - 80,
+            stroke: 0
         }
     ]
 };
@@ -127,7 +129,6 @@ function setLine() {
 
 function deleteLine() {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
-    console.log(gMeme.lines)
     gMeme.lines.splice(memeLine, 1);
 }
 
@@ -159,6 +160,11 @@ function setTxtFont(txtFont) {
             memeLine.font = 'Veranda';
             break;
     }
+}
+
+function setStrokeTxt(stroke) {
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    memeLine.stroke = stroke;
 }
 
 function setAlign(direction) {
