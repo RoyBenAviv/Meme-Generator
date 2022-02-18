@@ -9,8 +9,8 @@ function renderGallery() {
     var images = getImgs();
     var strHtmls = images.map(image => {
         return `
-        <div style="position: relative;"> 
-        <img style="position: relative;" class="meme-img" src="${image.url}">
+        <div onclick="onImgSelect(${image.id})" style="position: relative;"> 
+        <img class="meme-img" src="${image.url}">
         <div class="genre">Genre: ${image.keywords}</div>
         </div>`;
     });
@@ -23,7 +23,7 @@ function onSearchGenre(value) {
 }
 
 function getRandomImg() {
-    var images = getImgForDisplay();
+    var images = getImgs();
 
     var idx = getRandomInt(0, images.length - 1);
     var drawnImage = images[idx];

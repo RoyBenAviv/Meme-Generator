@@ -4,6 +4,15 @@
     background-color: black;
 }
 
+.nav-container .nav-content h1 {
+    font-family: mouse;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    text-shadow: 0px -4px 2px #a3242b;
+    text-decoration: underline;
+    user-select: none;
+}
+
 .nav-container .nav-content .nav-options {
     gap: 2.5rem;
     width: 100%;
@@ -38,5 +47,16 @@
     font-family: kid;
     width: 100%;
     font-size: 1rem;
+}
+
+.nav-container .nav-content .nav-options li:first-child {
+    position: relative;
+}
+
+.nav-container .nav-content .nav-options li:first-child img {
+    position: absolute;
+    width: 50px;
+    bottom: 0;
+    right: 130px;
 }
 
