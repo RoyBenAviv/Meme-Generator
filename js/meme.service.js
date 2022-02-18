@@ -2,7 +2,7 @@
 
 var gImgs;
 var gImgId = 1;
-var gFilterImg
+var gFilterImg;
 
 _createImages();
 
@@ -64,9 +64,9 @@ function _createImages() {
 
 function getImgs() {
     const images = gImgs.filter(img => {
-        const keywords = img.keywords.toUpperCase()
-        return keywords === gFilterImg
-    })
+        const keywords = img.keywords.toUpperCase();
+        return keywords === gFilterImg;
+    });
     return (!images.length) ? gImgs : images;
 }
 
@@ -81,12 +81,36 @@ function setImg(imageId) {
 
 function setRandomMeme(imageId) {
     gMeme.selectedImgId = imageId;
-    gMeme.lines.forEach(line => {
-        line.txt = getRandomTxt()
-        line.color = getRandomColor()
-    })
+    gMeme.lines = []
 
+    for (var i = 0; i < getRandomInt(1,3); i++) {
+        gMeme.lines.push({
+            txt: getRandomTxt(),
+            size: calcFontSize(),
+            align: 'center',
+            color: getRandomColor(),
+            font: 'Impact',
+            posX: gCanvas.width / 2,
+            posY: calcPosY()
+        });
+    }
     renderMeme();
+}
+
+function calcFontSize() {
+    const randomTxt = getRandomTxt();
+
+    if(randomTxt.length >= 13) return 25
+    return 50;
+}
+
+function calcPosY() {
+    var lastLine
+    if (gMeme.lines.length === 2) lastLine = gMeme.lines[0]
+    else lastLine = gMeme.lines[gMeme.lines.length - 1]
+    if(!gMeme.lines.length) return 80
+    if (lastLine.posY > gCanvas.height - 30) return lastLine.posY = gMeme.lines[0].posY + 40
+    return lastLine.posY + 50
 }
 
 function setLine() {
@@ -97,8 +121,14 @@ function setLine() {
         color: 'white',
         font: 'Impact',
         posX: gCanvas.width / 2,
-        posY: gCanvas.height / 2
-    })
+        posY: calcPosY()
+    });
+}
+
+function deleteLine() {
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    console.log(gMeme.lines)
+    gMeme.lines.splice(memeLine, 1);
 }
 
 function setLineTxt(memeTxt) {
@@ -147,8 +177,8 @@ function setAlign(direction) {
 }
 
 function switchLine() {
-    gMeme.selectedLineIdx++
-    if(gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
+    gMeme.selectedLineIdx++;
+    if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0;
 }
 
 function getMemeLine() {

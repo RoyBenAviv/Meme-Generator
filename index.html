@@ -27,18 +27,19 @@
                 <li onclick="onRandomMeme()">Feeling Flexible
                     <img class="drake1" src="/images/other/drake1.png">
                 </li>
-                
+
                 <li>My Memes</li>
                 <li>
                     <label for="category-img"><img class="drake2" src="/images/other/drake2.png"></label>
-                        <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img" placeholder="Choose Genre">
-                        <datalist id="categories">
-                            <option value="Politics">
-                            <option value="Animals">
-                            <option value="Babys">
-                            <option value="TV">
-                            <option value="Movies">
-                        </datalist>
+                    <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img"
+                        placeholder="Choose Genre">
+                    <datalist id="categories">
+                        <option value="Politics">
+                        <option value="Animals">
+                        <option value="Babys">
+                        <option value="TV">
+                        <option value="Movies">
+                    </datalist>
                 </li>
             </ul>
             <ul class="nav-options nav-canvas nav-gallery clean-list" hidden>
@@ -59,11 +60,12 @@
             <canvas id="my-canvas" height="450" width="450"></canvas>
 
             <div class="user-editor flex column">
-                
+
                 <div class="user-options">
                     <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
                     <button class="add" title="add line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
-                    <button class="delete" title="delete line" onclick="onDeleteLine()"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="delete" title="delete line" onclick="onDeleteLine()"><i
+                            class="fa-solid fa-trash-can"></i></button>
                     <select class="font-select" onchange="onSetFont(this.value)">
                         <option value="IMPACT">Impact</option>
                         <option value="ARIAL">Arial</option>
@@ -71,11 +73,14 @@
                     </select>
                     <div title="font size" class="range-container">
                         <input type="range" name="font-size" min="25" max="99" value="50"
-                        oninput="onSetSize(this.value)" />
+                            oninput="onSetSize(this.value)" />
                         <span>font size: <span id="font-size">50</span></span>
                     </div>
-                    
-                    <button class="switch-line" title="switch line" onclick="onSwitchLine()"><img src="./images/other/switch.png"></button>
+
+                    <button class="switch-line" title="switch line" onclick="onSwitchLine()"><img
+                            src="./images/other/switch.png"></button>
+                    <button class="stroke" title="stroke text" onclick="onStrokeTxt()"><img
+                            src="./images/other/text-stroke.png"></button>
                     <div class="color">
                         <button><i class="fa-solid fa-paintbrush"></i></button>
                         <input title="change color" type="color" name="color" value="#ffffff"

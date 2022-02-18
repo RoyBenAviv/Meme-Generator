@@ -38,6 +38,11 @@ function onAddLine() {
     renderMeme();
 }
 
+function onDeleteLine() {
+    deleteLine()
+    renderMeme();
+}
+
 function onSetText(el) {
     const memeTxt = el.value;
     setLineTxt(memeTxt);

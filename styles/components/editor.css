@@ -34,7 +34,7 @@
 }
 
 .editor .user-editor span {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     margin-block-start: 3px;
 }
 
@@ -85,6 +85,7 @@
 
 .editor .user-editor .font-select {
     border: 2px solid #0075ff;
+    height: 90%;
 }
 
 
