@@ -209,14 +209,14 @@ function getMemeForDisplay() {
 }
 
 function saveMyMemes(memeCanvas) {
-
     var memeInfo = {...gMeme}
     const myMeme = {
-        img: memeCanvas.toDataURL(),
-        meme: memeInfo
+        img: memeCanvas.toDataURL("image/jpeg"),
+        meme: memeInfo,
+        url: memeCanvas
     }
+    if (!gMyMemes) gMyMemes = []
     gMyMemes.push(myMeme)
-
     _saveMemesToStorage()
 }
 

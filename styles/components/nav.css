@@ -44,7 +44,7 @@
     position: relative;
 }
 
-.drake1, .drake2, .girl {
+.drake1, .drake2, .girl, .exit, .peepo3d {
     cursor: pointer;
     position: absolute;
     width: 60px;
@@ -54,11 +54,12 @@
 }
 
 .girl {
-    cursor: pointer;
-    position: absolute;
     width: 90px;
     left: 40%;
     bottom: 115%;
-    transform: translate(-50%);
+}
+
+.exit, .peepo3d {
+    bottom: 115%;
 }
 

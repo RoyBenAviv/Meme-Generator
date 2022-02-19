@@ -101,8 +101,6 @@ function renderTxt() {
     var currLineIdx = 0
     const meme = getMemeForDisplay();
     meme.lines.forEach(line => {
-        // console.log(line)
-        // drawText(line.txt, line.stroke, line.color, line.align, line.size, line.font, line.posX, line.posY, currLineIdx++)
         drawText(currLineIdx++)
     })
 }
