@@ -134,33 +134,38 @@ function setLine() {
         font: 'Impact',
         posX: gCanvas.width / 2,
         posY: calcPosY(),
-        stroke: 1
+        stroke: 1,
+        isDrag: false
     });
 }
 
 function deleteLine() {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
-    if(!memeLine) return
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     gMeme.lines.splice(memeLine, 1);
 }
 
 function setLineTxt(memeTxt) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     memeLine.txt = memeTxt;
 }
 
 function setColorTxt(memeClr) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     memeLine.color = memeClr;
 }
 
 function setTxtSize(txtSize) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     memeLine.size = txtSize;
 }
 
 function setTxtFont(txtFont) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     switch (txtFont) {
         case 'IMPACT':
             memeLine.font = 'Impact';
@@ -176,11 +181,13 @@ function setTxtFont(txtFont) {
 
 function setStrokeTxt(stroke) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     memeLine.stroke = stroke;
 }
 
 function setAlign(direction) {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) userMsg('<h1>No lines!</h1>')
     switch (direction) {
         case 'left':
             memeLine.align = 'left';

@@ -114,6 +114,7 @@ input[type="color"] {
 
 .user-msg {
     position: fixed;
+    z-index: 99;
     text-align: center;
     bottom: -150px;
     right: 10px;

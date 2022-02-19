@@ -19,6 +19,7 @@ function renderMyMemes() {
     if(!gMyMemes || !gMyMemes.length) {
         userMsg('<h1>No memes to display.</h1>')
         onBack()
+        return
     } 
     else {
         var strHtmls = gMyMemes.map(myMeme => {
