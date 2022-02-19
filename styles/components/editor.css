@@ -114,7 +114,7 @@ input[type="color"] {
 
 .user-msg {
     position: fixed;
-    justify-content: center;
+    text-align: center;
     bottom: -150px;
     right: 10px;
     background-color: #111;
