@@ -6,7 +6,11 @@ function uploadImg() {
 
     function onSuccess(uploadedImgUrl) {
         const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)        
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`);
+        userMsg(`
+        <h1> Your Meme is ready! </h1>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}"
+         title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${uploadedImgUrl}&t=${uploadedImgUrl}'); 
+         return false;">CLICK HERE</a>`)
     }
     
     doUploadImg(imgDataUrl, onSuccess);

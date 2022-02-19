@@ -1,6 +1,6 @@
 header {
     border-bottom: 5px solid wheat;
-    background-color: #a3242b;
+    background-image: linear-gradient(to right top, #b30000, #b30000, #b30000, #b30000, #b30000, #b92c05, #bf4310, #c4561c, #d07b3a, #dc9e5e, #e8be87, #f5deb3);
 }
 
 .header-container {

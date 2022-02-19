@@ -10,7 +10,7 @@ var gFilterImg;
 _createImages();
 
 var gMeme = {
-    selectedImgId: 0,
+    selectedImgId: 1,
     selectedLineIdx: 0,
     lines: [
         {
@@ -140,6 +140,7 @@ function setLine() {
 
 function deleteLine() {
     const memeLine = gMeme.lines[gMeme.selectedLineIdx];
+    if(!memeLine) return
     gMeme.lines.splice(memeLine, 1);
 }
 
@@ -167,8 +168,8 @@ function setTxtFont(txtFont) {
         case 'ARIAL':
             memeLine.font = 'Arial';
             break;
-        case 'VERANDA':
-            memeLine.font = 'Veranda';
+        case 'GEORGIA':
+            memeLine.font = 'Georgia';
             break;
     }
 }

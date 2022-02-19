@@ -3,6 +3,7 @@
 var gMyMemes = loadFromStorage(STORAGE_KEY)
 
 function openMyMemes() {
+    document.querySelector('.canvas-bg').style.opacity = '0';
     document.querySelector('.memes-section').style.display = 'flex'
     document.querySelector('.gallery').style.display = 'none'
     document.querySelector('.editor').style.display = 'none'
@@ -16,7 +17,7 @@ function renderMyMemes() {
     var memeIdx = 0
     
     if(!gMyMemes || !gMyMemes.length) {
-        alert('There are no memes to display.')
+        userMsg('<h1>No memes to display.</h1>')
         onBack()
     } 
     else {

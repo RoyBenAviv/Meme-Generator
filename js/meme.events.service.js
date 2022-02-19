@@ -23,6 +23,8 @@ function addTouchListeners() {
 
 
 function onDown(ev) {
+    const memeLine = getMemeLine()
+    if (!memeLine) return
     const pos = getEvPos(ev)
     if (!isLineClicked(pos)) return
     setLineDrag(true)
@@ -33,6 +35,7 @@ function onDown(ev) {
 
 function onMove(ev) {
     const memeLine = getMemeLine()
+    if (!memeLine) return
     if(memeLine.isDrag) {
         const pos = getEvPos(ev)
         const dx = pos.x - gStartPos.x
@@ -44,6 +47,8 @@ function onMove(ev) {
 }
 
 function onUp() {
+    const memeLine = getMemeLine()
+    if (!memeLine) return
     setLineDrag(false)
     document.querySelector('#my-canvas').style.cursor = 'grab'
 }

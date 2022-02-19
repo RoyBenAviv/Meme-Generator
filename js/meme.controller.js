@@ -25,6 +25,7 @@ function resizeCanvas() {
 
 function onSave() {
     const memeCanvas = gCanvas
+    userMsg('<h1>Meme Saved!</h1> <a onclick="openMyMemes()">CLICK HERE</a>')
     saveMyMemes(memeCanvas)
 }
 
@@ -146,7 +147,6 @@ function onBack() {
 
 function resetCanvas() {
     const meme = getMemeForDisplay()
-
     var lineIdx = 1;
     meme.lines.length = 2
     meme.lines.forEach(line => {
@@ -159,4 +159,15 @@ function resetCanvas() {
     })
     document.querySelector('input[name=meme-text]').value = '';
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
+}
+
+function userMsg(msg) {
+    const el = document.querySelector('.user-msg')
+    el.innerHTML = msg
+    el.classList.remove('close')
+    el.classList.add('open')
+    setTimeout(() => {
+        el.classList.add('close')
+        el.classList.remove('open')
+    }, 4000)
 }

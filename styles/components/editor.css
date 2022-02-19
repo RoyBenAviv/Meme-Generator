@@ -112,6 +112,25 @@ input[type="color"] {
     transition: opacity 0.5s;
 }
 
+.user-msg {
+    position: fixed;
+    justify-content: center;
+    bottom: -150px;
+    right: 10px;
+    background-color: #111;
+    padding: 10px;
+    color: wheat;
+  }
+  .user-msg.open {
+    bottom: 10px;
+    transition: bottom 0.7s;
+  }
+
+  .user-msg.close {
+    bottom: -150px;
+    transition: bottom 0.7s;
+  }
+
 canvas {
     border-radius: 40px;
 }
