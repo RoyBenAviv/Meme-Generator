@@ -25,7 +25,6 @@
     }
 }
 
-
 @media (max-width: 490px) {
     .editor .user-options {
         grid-template-columns: repeat(4, 1fr);
@@ -39,12 +38,10 @@
         justify-items: left;
     }
 
-
-
-
     .editor .user-editor input:first-child {
         justify-self: left;
     }
+    
     .left {
         justify-self: center;
     }
