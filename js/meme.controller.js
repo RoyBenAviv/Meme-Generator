@@ -123,7 +123,6 @@ function onDownload(elLink) {
     elLink.href = imgContent;
 }
 
-// Nav bar
 function toggle3d() {
     const canvasContainer = document.querySelector('.canvas-container');
     canvasContainer.classList.toggle('canvas-container-3d');
@@ -141,16 +140,14 @@ function onBack() {
     document.querySelector('.nav-gallery').style.display = 'flex';
     document.querySelector('.nav-canvas').style.display = 'none';
     document.querySelector('.nav-my-memes').style.display = 'none';
-
     resetCanvas();
 }
 
 function resetCanvas() {
     const meme = getMemeForDisplay();
-    if (!meme.lines.length) return;
+    if (!meme.lines.length) setLine();
     else {
-        var lineIdx = 1;
-        meme.lines.length = 2;
+        var lineIdx = 1
         meme.lines.forEach(line => {
             line.txt = `Meme Line ${lineIdx++}`;
             line.size = 50;
@@ -158,7 +155,6 @@ function resetCanvas() {
             line.color = 'white';
             line.font = 'impact',
             line.posX = gCanvas.width / 2,
-            line.posY = calcPosY(),
             line.stroke = 1;
         });
     }

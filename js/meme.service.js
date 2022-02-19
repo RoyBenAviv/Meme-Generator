@@ -127,7 +127,7 @@ function calcPosY() {
 
 function setLine() {
     gMeme.lines.push({
-        txt: `new text ${gMeme.lines.length}`,
+        txt: `Meme Line ${gMeme.lines.length + 1}`,
         size: 50,
         align: 'center',
         color: 'white',
