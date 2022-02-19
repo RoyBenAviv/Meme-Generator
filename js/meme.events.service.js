@@ -2,12 +2,25 @@
 
 var gIsDrag = false
 var gStartPos
+const gTouchEvs = ['touchstart', 'touchmove', 'touchend']
+
+function addListeners() {
+    addMouseListeners()
+    addTouchListeners()
+}
 
 function addMouseListeners() {
     gCanvas.addEventListener('mousemove', onMove)
     gCanvas.addEventListener('mousedown', onDown)
     gCanvas.addEventListener('mouseup', onUp)
 }
+
+function addTouchListeners() {
+    gCanvas.addEventListener('touchmove', onMove)
+    gCanvas.addEventListener('touchstart', onDown)
+    gCanvas.addEventListener('touchend', onUp)
+}
+
 
 function onDown(ev) {
     const pos = getEvPos(ev)
@@ -40,13 +53,13 @@ function getEvPos(ev) {
         x: ev.offsetX,
         y: ev.offsetY
     }
-    // if (gTouchEvs.includes(ev.type)) {
+    if (gTouchEvs.includes(ev.type)) {
         ev.preventDefault()
-        // ev = ev.changedTouches[0]
+        ev = ev.changedTouches[0]
         pos = {
             x: ev.pageX - ev.target.offsetLeft - ev.target.clientLeft,
             y: ev.pageY - ev.target.offsetTop - ev.target.clientTop
-        // }
+        }
     }
     return pos
 }

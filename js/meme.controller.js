@@ -5,7 +5,7 @@ var gCtx = gCanvas.getContext('2d');
 var gStroke = 1;
 
 function initCanvas() {
-    addMouseListeners()
+    addListeners()
     resizeCanvas();
     window.addEventListener('resize', () => {
         resizeCanvas();
