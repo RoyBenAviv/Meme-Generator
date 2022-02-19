@@ -2,12 +2,27 @@
     .meme-img {
         width: 100px;
     }
+
+    header .header-container .logo .logo-text h5 {
+        display: none;
+    }
     .editor .user-editor .font-select {
         font-size: 1rem;
     }
     .gallery .gallery-images .genre {
        display: none;
     }
+
+    .nav-container .nav-content .nav-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .nav-container .nav-content .nav-options img {
+        display: none;
+    }
+    
 }
 
 @media (max-width: 900px) {
@@ -53,6 +68,10 @@
 
     .editor .user-editor .font-select {
         font-size: 1.5rem;
+    }
+
+    .nav-container .nav-content .nav-options {
+        gap: 6rem
     }
 }
 
