@@ -5,7 +5,7 @@ var gCtx = gCanvas.getContext('2d');
 var gStroke = 1;
 
 function initCanvas() {
-
+    addMouseListeners()
     resizeCanvas();
     window.addEventListener('resize', () => {
         resizeCanvas();
@@ -112,8 +112,6 @@ function drawText(lineIdx) {
     const line = meme.lines[lineIdx]
     gCtx.strokeStyle = 'black';
     gCtx.lineWidth = line.stroke;
-    console.log(line)
-    console.log(line.stroke)
     gCtx.fillStyle = line.color
     gCtx.textAlign = line.align
     gCtx.font = `${line.size}px ${line.font}`;
@@ -143,6 +141,7 @@ function onBack() {
     document.querySelector('.canvas-bg').style.opacity = '0';
     document.querySelector('.nav-gallery').style.display = 'flex'
     document.querySelector('.nav-canvas').style.display = 'none'
+    document.querySelector('.nav-my-memes').style.display = 'none'
 
     resetCanvas()
 }

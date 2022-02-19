@@ -48,4 +48,5 @@ function switchSections() {
     document.querySelector('.canvas-bg').style.opacity = '0.5'
     document.querySelector('.nav-gallery').style.display = 'none'
     document.querySelector('.nav-canvas').style.display = 'flex'
+    document.querySelector('.nav-my-memes').style.display = 'none'
 }

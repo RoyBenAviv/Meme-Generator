@@ -1,10 +1,10 @@
 .my-memes-gallery {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    padding: 20px;
+    gap: 50px;
+    padding-top: 4rem;
 }
 
 .my-memes-gallery > img {
-    width: 300px;
+    width: 250px;
 }

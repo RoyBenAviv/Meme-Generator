@@ -21,7 +21,8 @@ var gMeme = {
             font: 'Impact',
             posX: gCanvas.width / 2,
             posY: 80,
-            stroke: 1
+            stroke: 1,
+            isDrag: false
         },
         {
             txt: 'Meme line 2',
@@ -31,7 +32,8 @@ var gMeme = {
             font: 'Impact',
             posX: gCanvas.width / 2,
             posY: gCanvas.height - 80,
-            stroke: 1
+            stroke: 1,
+            isDrag: false
         }
     ]
 };
@@ -81,6 +83,11 @@ function filterImage(value) {
 
 function setImg(imageId) {
     gMeme.selectedImgId = imageId;
+    renderMeme();
+}
+
+function setSavedMeme(savedMeme) {
+    gMeme = savedMeme.meme
     renderMeme();
 }
 

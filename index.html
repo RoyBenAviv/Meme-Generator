@@ -20,15 +20,16 @@
             </div>
         </div>
     </header>
-    <nav class="nav-container">
+    <nav class="nav-container flex align-end">
         <div class="nav-content main-layout flex column align-center">
-            <h1>Style your meme!</h1>
             <ul class="nav-options nav-gallery clean-list flex">
                 <li onclick="onRandomMeme()">Feeling Flexible
                     <img class="drake1" src="images/other/drake1.png">
                 </li>
 
-                <li onclick="openMyMemes()">My Memes</li>
+                <li onclick="openMyMemes()">My Memes
+                    <img class="girl" src="images/other/girl.png">
+                </li>
                 <li>
                     <label for="category-img"><img class="drake2" src="images/other/drake2.png"></label>
                     <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img"
@@ -45,6 +46,9 @@
             <ul class="nav-options nav-canvas nav-gallery clean-list" hidden>
                 <li onclick="onBack()">Go Back</li>
                 <li onclick="toggle3d()">3D MODE: <span class="switch">OFF</span></li>
+            </ul>
+            <ul class="nav-options nav-my-memes nav-gallery clean-list" hidden>
+                <li onclick="onBack()">Go Back</li>
             </ul>
     </nav>
     </div>
@@ -116,6 +120,7 @@
     <script src="js/upload-service.js"></script>
     <script src="js/meme.controller.js"></script>
     <script src="js/meme.service.js"></script>
+    <script src="js/meme.events.service.js"></script>
     <script src="js/gallery.controller.js"></script>
     <script src="js/my-memes.controller.js"></script>
 </body>

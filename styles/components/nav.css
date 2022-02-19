@@ -4,15 +4,6 @@
     background-color: black;
 }
 
-.nav-container .nav-content h1 {
-    font-family: mouse;
-    font-size: 1.8rem;
-    letter-spacing: 5px;
-    text-shadow: 0px -4px 2px #a3242b;
-    text-decoration: underline;
-    user-select: none;
-}
-
 .nav-container .nav-content .nav-options {
     gap: 6rem;
     width: 100%;
@@ -49,16 +40,25 @@
     font-size: 1rem;
 }
 
-.nav-options li:first-child, .nav-options li:last-child {
+.nav-options li {
     position: relative;
 }
 
-.drake1, .drake2 {
+.drake1, .drake2, .girl {
     cursor: pointer;
     position: absolute;
     width: 60px;
     left: 50%;
     bottom: 100%;
+    transform: translate(-50%);
+}
+
+.girl {
+    cursor: pointer;
+    position: absolute;
+    width: 90px;
+    left: 40%;
+    bottom: 115%;
     transform: translate(-50%);
 }
 

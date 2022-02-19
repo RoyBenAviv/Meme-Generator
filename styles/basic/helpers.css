@@ -24,6 +24,10 @@
     flex-direction: column;
 }
 
+.flex.align-end {
+    align-items: end;
+}
+
 .clean-list {
     list-style-type: none;
     margin: 0;
