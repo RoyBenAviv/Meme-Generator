@@ -15,7 +15,6 @@ function openMyMemes() {
 
 function renderMyMemes() {
     var memeIdx = 0
-    
     if(!gMyMemes || !gMyMemes.length) {
         userMsg('<h1>No memes to display.</h1>')
         onBack()
