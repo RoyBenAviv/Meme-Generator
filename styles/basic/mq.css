@@ -3,6 +3,10 @@
         width: 150px;
     }
 
+    .nav-container {
+        height: 110px;
+    }
+
     .gallery .gallery-images .meme-img {
         width: 100px;
     }
@@ -36,8 +40,17 @@
         height: 80px;
     }
 
+    .canvas-bg {
+        display: none;
+    }
+
     header .header-container .logo h2 {
         font-size: 2.5rem;
+        text-shadow: -2px -4px 2px #000000;
+    }
+
+    header .header-container .logo .logo-text h5 {
+        display: none;
     }
 
     header .header-container .logo img {
@@ -61,15 +74,15 @@
 @media (min-width: 490px) {
 
     .meme-img, .my-memes-gallery img {
-        width: 250px;
+        width: 180px;
+    }
+
+    .nav-container {
+        height: 115px;
     }
 
     .editor .user-editor input:first-child {
         width: 100%;
-    }
-
-    .meme-img {
-        width: 150px;
     }
     
     .gallery .gallery-images .genre {
@@ -81,7 +94,7 @@
     }
 
     .nav-container .nav-content .nav-options {
-        gap: 6rem
+        gap: 4rem
     }
 
     
@@ -90,11 +103,17 @@
 @media (min-width: 900px) {
     
     header {
-        height: 200px;
+        height: 130px;
     }
     
+    .nav-container {
+        height: 95px;
+    }
+
     header .header-container .logo h2 {
         font-size: 3rem;
+        text-shadow: -8px -4px 2px #000000;
+        
     }
 
     header .header-container .logo img {
@@ -123,12 +142,12 @@
 @media (min-width: 1200px) {
 
     header .header-container .logo h2 {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
 
     header .header-container .logo img {
-        width: 110px;
-        height: 110px;
+        width: 80px;
+        height: 80px;
     } 
 
     .main-layout {
