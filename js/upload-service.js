@@ -36,5 +36,24 @@ function doUploadImg(imgDataUrl, onSuccess) {
 }
 
 
+function onImgInput(ev) {
+    loadImageFromInput(ev, renderImg)
+    switchSections()
+}
 
+function loadImageFromInput(ev, onImageReady) {
 
+    var reader = new FileReader()
+
+    reader.onload = function (event) {
+        var img = new Image()
+        img.onload = onImageReady.bind(null, img)
+        img.src = event.target.result
+    }
+    reader.readAsDataURL(ev.target.files[0])
+}
+
+function renderImg(img) {
+    addNewImg(img)
+    gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
+}

@@ -36,6 +36,11 @@
                 <li onclick="openMyMemes()">My Memes
                     <img class="girl" src="images/other/girl.png">
                 </li>
+
+                <li>Upload Image
+                    <label for="upload-image"><img class="doge" src="images/other/doge.png"></label>
+                    <input id="upload-image" class="upload-image" type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+                </li>
                 <li>
                     <label for="category-img"><img class="drake2" src="images/other/drake2.png"></label>
                     <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img"

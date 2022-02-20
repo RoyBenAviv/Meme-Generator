@@ -100,7 +100,10 @@ function onSetFont(value) {
 function drawMemeFromGallery() {
     const meme = getMemeForDisplay();
     var img = new Image();
-    img.src = `./images/meme-images/${meme.selectedImgId}.jpg`;
+    const images = getImgs()
+   if(images[images.length -1].isUpload) {
+       img.src = images[images.length -1].url
+   } else img.src = `./images/meme-images/${meme.selectedImgId}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
         renderTxt();
@@ -140,8 +143,8 @@ function toggle3d() {
 }
 
 function onBack() {
-    const meme = getMemeForDisplay();
-    // UI Changes
+    const images = getImgs()
+    images[images.length -1].isUpload = false
     document.querySelector('.gallery').style.display = 'flex';
     document.querySelector('.editor').style.display = 'none';
     document.querySelector('.memes-section').style.display = 'none';

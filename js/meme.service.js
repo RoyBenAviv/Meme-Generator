@@ -38,11 +38,12 @@ var gMeme = {
     ]
 };
 
-function _createImage(url, keywords) {
+function _createImage(url, keywords, isUpload = false) {
     return {
         id: gImgId++,
         url,
-        keywords
+        keywords,
+        isUpload
     };
 }
 
@@ -68,6 +69,14 @@ function _createImages() {
         _createImage(`./images/meme-images/18.jpg`, 'Movies'),
     ];
 }
+
+function addNewImg(img) {
+    const uploadImg = img.src
+    gImgs.push(_createImage(uploadImg, 'test', true))
+    console.log('upload img:', uploadImg, 'gImgs after pushing:', gImgs)
+}
+
+// function getImgs
 
 function getImgs() {
     const images = gImgs.filter(img => {
@@ -127,7 +136,7 @@ function calcPosY() {
 function setLine() {
     gMeme.lines.push({
         txt: `Meme Line ${gMeme.lines.length + 1}`,
-        size: calcuFontSize(),
+        size: setFontSize(),
         align: 'center',
         color: 'white',
         font: 'Impact',
