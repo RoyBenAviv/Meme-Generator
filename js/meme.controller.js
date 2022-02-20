@@ -23,6 +23,12 @@ function resizeCanvas() {
     }
 }
 
+function calcuFontSize() {
+    resizeCanvas();
+    if(gCanvas.width < 300) return 35
+    else return 50
+}
+
 function onSave() {
     const memeCanvas = gCanvas;
     userMsg('<h1>Meme Saved!</h1> <a onclick="openMyMemes()">CLICK HERE</a>');
@@ -150,7 +156,7 @@ function resetCanvas() {
         var lineIdx = 1
         meme.lines.forEach(line => {
             line.txt = `Meme Line ${lineIdx++}`;
-            line.size = 50;
+            line.size = calcuFontSize();
             line.align = 'center';
             line.color = 'white';
             line.font = 'impact',

@@ -15,7 +15,7 @@ var gMeme = {
     lines: [
         {
             txt: 'Meme line 1',
-            size: 50,
+            size: calcuFontSize(),
             align: 'center',
             color: 'white',
             font: 'Impact',
@@ -26,7 +26,7 @@ var gMeme = {
         },
         {
             txt: 'Meme line 2',
-            size: 50,
+            size: calcuFontSize(),
             align: 'center',
             color: 'white',
             font: 'Impact',
@@ -128,7 +128,7 @@ function calcPosY() {
 function setLine() {
     gMeme.lines.push({
         txt: `Meme Line ${gMeme.lines.length + 1}`,
-        size: 50,
+        size: calcuFontSize(),
         align: 'center',
         color: 'white',
         font: 'Impact',
