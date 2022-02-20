@@ -38,12 +38,11 @@ var gMeme = {
     ]
 };
 
-function _createImage(url, keywords, isUpload = false) {
+function _createImage(url, keywords) {
     return {
         id: gImgId++,
         url,
-        keywords,
-        isUpload
+        keywords
     };
 }
 
@@ -72,7 +71,7 @@ function _createImages() {
 
 function addNewImg(img) {
     const uploadImg = img.src
-    gImgs.push(_createImage(uploadImg, 'test', true))
+    gImgs.push(_createImage(uploadImg, 'Uploaded'))
 }
 
 // function getImgs

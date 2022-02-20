@@ -53,6 +53,27 @@ function loadImageFromInput(ev, onImageReady) {
     reader.readAsDataURL(ev.target.files[0])
 }
 
+async function shareAPI() {
+
+    const dataUrl = gCanvas.toDataURL();
+  const blob = await (await fetch(dataUrl)).blob();
+  const filesArray = [
+    new File(
+      [blob],
+      'canvas.png',
+      {
+        type: blob.type,
+        lastModified: new Date().getTime()
+      }
+    )
+  ];
+  const shareData = {
+    files: filesArray,
+  };
+  navigator.share(shareData);
+}
+
+
 function renderImg(img) {
     addNewImg(img)
     gCanvas.width = img.width / 4

@@ -10,7 +10,13 @@
     "font size color stroke"
     "delete left center right"
     ". . . ."
-    ". save download share";
+    "share-api save download share";
+}
+
+@media (min-width: 900px) {
+    .share-api {
+        left: 100px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -21,7 +27,7 @@
         "input input plus switch"
         "font size color stroke"
         "delete left center right"
-        ". save download share";
+        "share-api save download share";
     }
 }
 
@@ -44,6 +50,10 @@
     
     .left {
         justify-self: center;
+    }
+
+    .share-api {
+        display: none;
     }
 }
 
@@ -73,6 +83,13 @@
 
 .range-container {
     grid-area: size;
+}
+
+.share-api {
+    grid-area: share-api;
+    justify-self: start;
+    position: relative;
+    
 }
 
 .left {
