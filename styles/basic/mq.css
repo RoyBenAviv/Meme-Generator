@@ -84,8 +84,11 @@
 
 @media (min-width: 490px) {
 
-    .meme-img, .my-memes-gallery img {
-        width: 180px;
+    .gallery-images .meme-img {
+        width: 190px;
+    }
+    .meme-img.my-memes-gallery img {
+        width: 300px;
     }
 
     .nav-container {
