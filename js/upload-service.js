@@ -55,5 +55,8 @@ function loadImageFromInput(ev, onImageReady) {
 
 function renderImg(img) {
     addNewImg(img)
+    gCanvas.width = img.width / 4
+    gCanvas.height = img.height / 4
     gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
+    renderTxt();
 }

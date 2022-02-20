@@ -48,7 +48,6 @@ function onDeleteMeme(memeIdx) {
 function onShareMeme(memeImg) {
     
     const imgDataUrl = memeImg
-    console.log(imgDataUrl)
     function onSuccess(uploadedImgUrl) {
         const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)        
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`);

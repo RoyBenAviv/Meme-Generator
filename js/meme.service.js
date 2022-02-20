@@ -73,7 +73,6 @@ function _createImages() {
 function addNewImg(img) {
     const uploadImg = img.src
     gImgs.push(_createImage(uploadImg, 'test', true))
-    console.log('upload img:', uploadImg, 'gImgs after pushing:', gImgs)
 }
 
 // function getImgs
