@@ -148,7 +148,7 @@ function toggle3d() {
 
 function onBack() {
     const images = getImgs()
-    images.pop()
+    images[images.length -1].isUpload = false
     document.querySelector('.gallery').style.display = 'flex';
     document.querySelector('.editor').style.display = 'none';
     document.querySelector('.memes-section').style.display = 'none';
