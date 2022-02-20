@@ -4,7 +4,6 @@
 }
 
 .nav-container .nav-content .nav-options {
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -24,9 +23,7 @@
 }
 
 .nav-container .nav-content .nav-options > li #category-img {
-    width: 125px;
     border: none;
-    border-top: 1px solid wheat;
     background-color: transparent;
     color: #a3242b;
     font-family: kid;
@@ -39,7 +36,6 @@
     text-decoration: overline;
     font-family: kid;
     width: 100%;
-    font-size: 1rem;
 }
 
 .nav-button {
