@@ -27,7 +27,7 @@ function resizeCanvas() {
 }
 
 function toggleNav() {
-    document.querySelector('.nav-container').classList.toggle('open-nav')
+    document.body.classList.toggle('open-nav')
 }
 
 function setFontSize() {

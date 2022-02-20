@@ -1,13 +1,13 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-margin: 0;
-font-family: kid;
-color: white;
-background-color: #f5deb3;
-overflow-x: hidden;
+  margin: 0;
+  font-family: kid;
+  color: white;
+  background-color: #f5deb3;
+  overflow-x: hidden;
 }
 
 img {

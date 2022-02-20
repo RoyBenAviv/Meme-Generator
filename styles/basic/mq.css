@@ -46,8 +46,8 @@
     #category-img::placeholder {
         font-size: 1.3rem;
     } 
-    .nav-container.open-nav .nav-options {
-        transform: translateX(0);
+    body.open-nav .nav-options {
+        transform: translateX(0) !important;
     }
 
     .nav-container .nav-content .nav-options img {
