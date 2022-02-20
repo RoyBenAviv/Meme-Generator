@@ -4,7 +4,7 @@
     }
 
     .nav-container {
-        height: 110px;
+        height: 55px;
     }
 
     .gallery .gallery-images .meme-img {
@@ -25,8 +25,18 @@
 
     .nav-container .nav-content .nav-options {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        gap: 2rem;
+        position: fixed;
+        top: 130px;
+        height: 200px;
+        background-color: #111111ea;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: transform 0.6s;
+    }
+
+    .nav-container.open-nav .nav-options {
+        transform: translateX(-50%);
     }
 
     .nav-container .nav-content .nav-options img {
@@ -96,6 +106,10 @@
 
     .nav-container .nav-content .nav-options {
         gap: 4rem
+    }
+
+    .nav-button {
+        display: none;
     }
 
     

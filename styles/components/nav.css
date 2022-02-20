@@ -42,6 +42,18 @@
     font-size: 1rem;
 }
 
+.nav-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    top: 10vh;
+}
+
+.nav-button i {
+    font-size: 1.9rem;
+}
+
 .nav-options li {
     position: relative;
 }

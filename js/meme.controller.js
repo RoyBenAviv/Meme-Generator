@@ -26,6 +26,10 @@ function resizeCanvas() {
     }
 }
 
+function toggleNav() {
+    document.querySelector('.nav-container').classList.toggle('open-nav')
+}
+
 function setFontSize() {
     resizeCanvas();
     if(gCanvas.width < 300) return 35
@@ -144,7 +148,7 @@ function toggle3d() {
 
 function onBack() {
     const images = getImgs()
-    images[images.length -1].isUpload = false
+    images.pop()
     document.querySelector('.gallery').style.display = 'flex';
     document.querySelector('.editor').style.display = 'none';
     document.querySelector('.memes-section').style.display = 'none';
