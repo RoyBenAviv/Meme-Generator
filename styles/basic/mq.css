@@ -1,5 +1,9 @@
 @media (max-width: 490px) {
-    .meme-img {
+    .meme-img, .my-memes-gallery img {
+        width: 150px;
+    }
+
+    .gallery .gallery-images .meme-img {
         width: 100px;
     }
 
@@ -55,6 +59,11 @@
 }
 
 @media (min-width: 490px) {
+
+    .meme-img, .my-memes-gallery img {
+        width: 250px;
+    }
+
     .editor .user-editor input:first-child {
         width: 100%;
     }
@@ -74,6 +83,8 @@
     .nav-container .nav-content .nav-options {
         gap: 6rem
     }
+
+    
 }
 
 @media (min-width: 900px) {

@@ -23,6 +23,7 @@
 .gallery .gallery-images .img-container {
     position: relative;
     height: max-content;
+    cursor: pointer;
 }
 
 .gallery .gallery-images .genre {

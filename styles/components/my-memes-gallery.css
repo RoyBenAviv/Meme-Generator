@@ -5,10 +5,6 @@
     padding-top: 4rem;
 }
 
-.my-memes-gallery img {
-    width: 250px;
-}
-
 .my-memes-gallery .saved-memes {
     position: relative;
 }
@@ -24,6 +20,10 @@
     padding: 0 30px;
     align-items: center;
     transition: all 0.5s;
+}
+
+.my-memes-gallery .saved-options i {
+    font-size: 1.7rem;
 }
 
 .my-memes-gallery .saved-options i:hover {
