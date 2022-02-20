@@ -15,7 +15,7 @@ var gMeme = {
     lines: [
         {
             txt: 'Meme line 1',
-            size: calcuFontSize(),
+            size: setFontSize(),
             align: 'center',
             color: 'white',
             font: 'Impact',
@@ -26,7 +26,7 @@ var gMeme = {
         },
         {
             txt: 'Meme line 2',
-            size: calcuFontSize(),
+            size: setFontSize(),
             align: 'center',
             color: 'white',
             font: 'Impact',
@@ -65,7 +65,7 @@ function _createImages() {
         _createImage(`./images/meme-images/15.jpg`, 'TV'),
         _createImage(`./images/meme-images/16.jpg`, 'TV'),
         _createImage(`./images/meme-images/17.jpg`, 'Politics'),
-        _createImage(`./images/meme-images/18.jpg`, 'Movies')
+        _createImage(`./images/meme-images/18.jpg`, 'Movies'),
     ];
 }
 
@@ -103,7 +103,7 @@ function setRandomMeme(imageId) {
             color: getRandomColor(),
             font: 'Impact',
             posX: gCanvas.width / 2,
-            posY: calcPosY() + 40
+            posY: calcPosY() + 90
         });
     }
     renderMeme();
@@ -111,9 +111,8 @@ function setRandomMeme(imageId) {
 
 function calcFontSize() {
     const randomTxt = getRandomTxt();
-
-    if(randomTxt.length >= 13) return 25
-    return 50;
+    if(randomTxt.length >= 13) return 50
+    return 25;
 }
 
 function calcPosY() {

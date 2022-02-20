@@ -17,13 +17,16 @@ function resizeCanvas() {
     if (window.innerWidth < 490) {
         gCanvas.width = 200;
         gCanvas.height = 200;
-    } else {
+    } else if (window.innerWidth < 900) {
+            gCanvas.width = 300;
+            gCanvas.height = 300; 
+        } else {
         gCanvas.width = 400;
         gCanvas.height = 400;
     }
 }
 
-function calcuFontSize() {
+function setFontSize() {
     resizeCanvas();
     if(gCanvas.width < 300) return 35
     else return 50
@@ -156,7 +159,7 @@ function resetCanvas() {
         var lineIdx = 1
         meme.lines.forEach(line => {
             line.txt = `Meme Line ${lineIdx++}`;
-            line.size = calcuFontSize();
+            line.size = setFontSize();
             line.align = 'center';
             line.color = 'white';
             line.font = 'impact',

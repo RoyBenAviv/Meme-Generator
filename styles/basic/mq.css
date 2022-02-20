@@ -64,6 +64,7 @@
 
     .editor .user-editor {
         margin: 1rem auto 0 auto;
+        padding: 1.5em;
     }
 
     .editor .user-editor input:first-child {
@@ -131,6 +132,7 @@
     
     .user-editor {
         margin-inline-start: 1.875rem;
+        padding: 2em;
     }
 
     .editor .user-editor input:first-child {

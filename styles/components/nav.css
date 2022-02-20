@@ -6,6 +6,7 @@
 .nav-container .nav-content .nav-options {
     width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-container .nav-content .nav-options > li {

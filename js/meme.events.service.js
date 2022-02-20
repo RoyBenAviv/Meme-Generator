@@ -26,11 +26,10 @@ function onDown(ev) {
     const memeLine = getMemeLine()
     if (!memeLine) return
     const pos = getEvPos(ev)
-    if (!isLineClicked(pos)) return
+    if (!isLineClicked(pos)) return userMsg('<h2>You are not choosing text</h2>')
     setLineDrag(true)
     gStartPos = pos
     document.querySelector('#my-canvas').style.cursor = 'grabbing'
-
 }
 
 function onMove(ev) {
