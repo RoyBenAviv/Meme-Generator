@@ -106,7 +106,7 @@ function drawMemeFromGallery() {
     const images = getImgs()
     var img = new Image();
     img.src = images[meme.selectedImgId - 1].url;
-
+    console.log(img.src)
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
         renderTxt();

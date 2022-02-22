@@ -92,8 +92,6 @@ input[type="color"] {
     cursor: pointer;
 	-webkit-appearance: none;
 	border: none;
-	width: 32px;
-	height: 32px;
     opacity: 0;
     left: 0;
     top: 0;
