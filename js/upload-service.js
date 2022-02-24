@@ -53,6 +53,14 @@ function loadImageFromInput(ev, onImageReady) {
     reader.readAsDataURL(ev.target.files[0])
 }
 
+function renderImg(img) {
+  addNewImg(img)
+  gCanvas.width = img.width / 4
+  gCanvas.height = img.height / 4
+  gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
+  // renderTxt();
+}
+
 async function shareAPI() {
 
     const dataUrl = gCanvas.toDataURL();
@@ -74,10 +82,3 @@ async function shareAPI() {
 }
 
 
-function renderImg(img) {
-    addNewImg(img)
-    gCanvas.width = img.width / 4
-    gCanvas.height = img.height / 4
-    gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-    renderTxt();
-}

@@ -72,6 +72,7 @@ function _createImages() {
 function addNewImg(img) {
     const uploadImg = img.src
     gImgs.push(_createImage(uploadImg, 'Uploaded'))
+    gMeme.selectedImgId = gImgs.length
 }
 
 // function getImgs
